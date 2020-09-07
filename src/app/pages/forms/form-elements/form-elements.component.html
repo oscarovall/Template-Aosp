@@ -1,0 +1,519 @@
+<tc-card [title]="'Inputs'">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [innerValue]="'Value'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [placeholder]="'Placeholder'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Label</tc-form-label>
+        <tc-input [placeholder]="'With label'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [placeholder]="'With description'"></tc-input>
+
+        <tc-form-description>Description</tc-form-description>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [tcShape]="20" [placeholder]="'Rounded'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [tcShape]="0" [placeholder]="'Square'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [charLimiting]="20" [placeholder]="'Limit 20 symbols'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [charLimiting]="50" [prefixIcon]="'icofont-pen-alt-4'" [placeholder]="'Limit 50 symbols'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [prefixIcon]="'icofont-cur-euro'" [placeholder]="'Placeholder'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [suffixIcon]="'icofont-pencil-alt-5'" [placeholder]="'Placeholder'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [prefix]="'Prefix'" [placeholder]="'placeholder'" [innerValue]="'value'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-input [suffix]="'suffix'" [placeholder]="'Placeholder'" [innerValue]="'Value'"></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-md-0">
+        <tc-input
+          [bgColor]="'transparent'"
+          [borderColor]="'#678cf9'"
+          [color]="'#678cf9'"
+          [placeholder]="'Custom style'"
+        ></tc-input>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-0">
+        <tc-input
+          [bgColor]="['#e24d4d', '#ffa522']"
+          [borderColor]="['#e24d4d', '#ffa522']"
+          [color]="['#000', '#fff']"
+          [placeholder]="'Custom style'"
+          [innerValue]="'Custom style'"
+        ></tc-input>
+      </tc-form-group>
+    </div>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Textareas'">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [innerValue]="'Value'"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Placeholder'"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Label</tc-form-label>
+
+        <tc-textarea [placeholder]="'With label'"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'With description'"></tc-textarea>
+
+        <tc-form-description>Description</tc-form-description>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Height 100px'" [height]="100"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Height 6rem'" [height]="'10rem'"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [tcShape]="30" [placeholder]="'Rounded'"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [tcShape]="0" [placeholder]="'Square'"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Without resize control'" [resize]="false"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Auto grow'" [autoGrow]="true"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Placeholder'" [charLimiter]="50"></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-textarea
+          [placeholder]="'Placeholder'"
+          [charLimiter]="{ counter: 200, before: 'Before text', after: 'after text' }"
+        ></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-md-0">
+        <tc-textarea
+          [borderColor]="'#E57373'"
+          [color]="'#E57373'"
+          [placeholder]="'Custom style'"
+        ></tc-textarea>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-0">
+        <tc-textarea
+          [bgColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [borderColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [color]="['#fff', '#fff', '#fff']"
+          [placeholder]="'Custom style'"
+          [innerValue]="'Custom style'"
+        ></tc-textarea>
+      </tc-form-group>
+    </div>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Selects'">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-select [placeholder]="'Simple select'" [options]="selectData"></tc-select>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-select [multiple]="true" [placeholder]="'Multi select'" [options]="selectData"></tc-select>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Select abel</tc-form-label>
+
+        <tc-select [placeholder]="'Placeholder'" [options]="selectData"></tc-select>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-select [placeholder]="'Placeholder'" [options]="selectData"></tc-select>
+
+        <tc-form-description>Select description</tc-form-description>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-select [allowClear]="true" [placeholder]="'With clear button'" [options]="selectData"></tc-select>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-select [filter]="true" [placeholder]="'With search'" [options]="selectData"></tc-select>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-md-0">
+        <tc-select [placeholder]="'Rounded select'" [options]="selectData" [tcShape]="500"></tc-select>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-0">
+        <tc-select
+          [placeholder]="'Custom styles'"
+          [options]="selectData"
+          [bgColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [borderColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [color]="['#fff', '#fff', '#fff']"
+        ></tc-select>
+      </tc-form-group>
+    </div>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Autocompletes'">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-autocomplete [data]="data" [key]="'country'" [placeholder]="'Type country\'s name'"></tc-autocomplete>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-autocomplete
+          [listColor]="'#678cf9'"
+          [placeholder]="'Custom list color'"
+          [data]="data"
+          [key]="'country'"
+        ></tc-autocomplete>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-autocomplete
+          [listAccentColor]="'#e24d4d'"
+          [placeholder]="'Custom list accent color'"
+          [data]="data"
+          [key]="'country'"
+        ></tc-autocomplete>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-autocomplete
+          [listBg]="'#302d2d'"
+          [listColor]="'#fff'"
+          [listAccentColor]="'#e24d4d'"
+          [placeholder]="'Custom list bg color'"
+          [data]="data"
+          [key]="'country'"
+        ></tc-autocomplete>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-md-0">
+        <tc-autocomplete
+          [data]="data"
+          [key]="'country'"
+          [placeholder]="'Rounded input'"
+          [tcShape]="20"
+        ></tc-autocomplete>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-0">
+        <tc-autocomplete
+          [data]="data"
+          [key]="'country'"
+          [placeholder]="'Custom input\'s color'"
+          [bgColor]="['#678cf9', '#3096f9', '#1a38f9']"
+          [borderColor]="['#678cf9', '#3096f9', '#1a38f9']"
+          [color]="['#fff', '#fff', '#fff']"
+          [innerValue]="'United States'"
+        ></tc-autocomplete>
+      </tc-form-group>
+    </div>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Checkboxes & Radio buttons'">
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <tc-form-group>
+        <tc-checkbox></tc-checkbox>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-checkbox>Uncheck</tc-checkbox>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-checkbox [value]="true">Checked</tc-checkbox>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-checkbox [disabled]="true">Disabled</tc-checkbox>
+      </tc-form-group>
+
+      <tc-form-group class="mb-md-0">
+        <tc-checkbox [value]="true" [disabled]="true">Checked disabled</tc-checkbox>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-4">
+      <tc-form-group>
+        <tc-radio [value]="'val2'">
+          <tc-radio-option [value]="'val0'"></tc-radio-option>
+          <tc-radio-option [value]="'val1'">Uncheck</tc-radio-option>
+          <tc-radio-option [value]="'val2'">Checked</tc-radio-option>
+        </tc-radio>
+      </tc-form-group>
+      <tc-form-group class="mb-md-0">
+        <tc-radio [value]="'val2'">
+          <tc-radio-option [value]="'val1'" [disabled]="true">Disabled</tc-radio-option>
+          <tc-radio-option [value]="'val2'" [disabled]="true">
+            Checked disabled
+          </tc-radio-option>
+        </tc-radio>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-4">
+      <tc-form-group>
+        <tc-radio [value]="'val2'">
+          <tc-radio-option
+            [value]="'val1'"
+            [bgColor]="['#fff', '#678cf9', '#fff']"
+            [borderColor]="['#678cf9', '#678cf9', '#678cf9']"
+            [color]="['#fff', '#fff', '#678cf9']"
+          >
+            Option label
+          </tc-radio-option>
+          <tc-radio-option
+            [value]="'val2'"
+            [bgColor]="['#fff', '#678cf9', '#fff']"
+            [borderColor]="['#678cf9', '#678cf9', '#678cf9']"
+            [color]="['#fff', '#fff', '#678cf9']"
+          >
+            Option label
+          </tc-radio-option>
+          <tc-radio-option
+            [value]="'val3'"
+            [bgColor]="['#fff', '#678cf9', '#fff']"
+            [borderColor]="['#678cf9', '#678cf9', '#678cf9']"
+            [color]="['#fff', '#fff', '#678cf9']"
+          >
+            Option label
+          </tc-radio-option>
+        </tc-radio>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-checkbox
+          [bgColor]="['transparent', '#678cf9', '#fff']"
+          [borderColor]="['#678cf9', '#678cf9', '#678cf9']"
+          [color]="['#fff', '#fff', '#678cf9']"
+        >Custom hover style</tc-checkbox>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-checkbox
+          [bgColor]="['transparent', '#678cf9', '#fff']"
+          [borderColor]="['#678cf9', '#678cf9', '#678cf9']"
+          [color]="['#fff', '#fff', '#678cf9']"
+        >Custom checked style</tc-checkbox>
+      </tc-form-group>
+    </div>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Switchers'">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-switcher></tc-switcher>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-switcher>Switch off</tc-switcher>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-switcher [value]="true">Switch on</tc-switcher>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-switcher [disabled]="true">Disabled</tc-switcher>
+      </tc-form-group>
+
+      <tc-form-group class="mb-md-0">
+        <tc-switcher [value]="true" [disabled]="true">Switch on disabled</tc-switcher>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-switcher
+          [bgColor]="'#50bd35'"
+          [borderColor]="'#50bd35'"
+          [color]="'#fff'"
+        >Custom style</tc-switcher>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-switcher
+          [bgColor]="['transparent', '#e5bf09']"
+          [borderColor]="['#e5bf09', '#e5bf09']"
+          [color]="['#e5bf09', '#fff']"
+        >Custom hover style</tc-switcher>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-switcher
+          [bgColor]="['transparent', '#ec846e', '#ec2427']"
+          [borderColor]="['#ec846e', '#ec846e', '#ec2427']"
+          [color]="['#ec846e', '#fff', '#ffc1a6']"
+          [value]="true"
+        >Custom checked style</tc-switcher>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-switcher
+          [bgColor]="['transparent', '#c18ae5', '#863d9d']"
+          [borderColor]="['#9982ab', '#c18ae5', '#863d9d']"
+          [color]="['#9982ab', '#fff']"
+          [labelColor]="['#9982ab', '#c18ae5', '#863d9d']"
+        >Custom label style</tc-switcher>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-switcher
+          [value]="true"
+          [disabled]="true"
+          [bgColor]="['transparent', '#7ccee5', '#244ae5', '#9bc5f9']"
+          [borderColor]="['#7ccee5', '#7ccee5', '#244ae5', '#9bc5f9']"
+          [color]="['#fff', '#fff', '#b6d4ff', '#cee4f9']"
+        >Custom disable style</tc-switcher>
+      </tc-form-group>
+    </div>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Buttons'">
+  <div class="buttons-list">
+    <button tc-button>Default</button>
+    <button tc-button [tcShape]="0">Square</button>
+    <button tc-button [tcShape]="500">Rounded</button>
+    <button tc-button [view]="'success'">Success</button>
+    <button tc-button [view]="'info'">Info</button>
+    <button tc-button [view]="'warning'">Warning</button>
+    <button tc-button [view]="'error'">Error</button>
+    <button tc-button [outline]="true" [tcLineStyle]="'dotted'" [view]="'default'">Outline</button>
+    <button tc-button [outline]="true" [view]="'info'">Info outline</button>
+    <button tc-button [outline]="true" [tcLineStyle]="'dashed'" [view]="'warning'">Warning outline</button>
+    <button tc-button [outline]="true" [tcShape]="500"	[view]="'success'">Success outline</button>
+    <button tc-button [outline]="true" [view]="'error'">Error outline</button>
+    <button tc-button [gradient]="true" [tcGradient]="['#e24d4d', '#fe6666']">Gradient</button>
+    <button tc-button [disabled]="true">Disabled</button>
+    <button tc-button [beforeIcon]="'icofont-bell-alt'">Before</button>
+    <button tc-button [afterIcon]="'icofont-pie-chart'" [tcGradient]="['#cce451', '#4b650d']">After</button>
+    <button tc-button [afterIcon]="'icofont-pencil-alt-5'" [view]="'success'" [outline]="true"></button>
+    <button
+      tc-button
+      [afterIcon]="'icofont-coffee-pot'"
+      [tcBgColor]="['#f0f4c3', '#aab71c']"
+      [tcColor]="'#000'"
+    >
+      Add
+    </button>
+    <button
+      tc-button
+      [beforeIcon]="'icofont-social-dropbox'"
+      [view]="'info'"
+      [outline]="true"
+      [tcBorderStyle]="'dashed'"
+    >
+      Dropbox
+    </button>
+    <button tc-button [afterIcon]="'icofont-trash'" [iconAnimation]="true" [view]="'error'">Remove</button>
+  </div>
+</tc-card>
+
+<tc-card [title]="'Badges'" class="mb-0">
+  <div class="badges-list">
+    <tc-badge [tcShape]="0">Square badge</tc-badge>
+    <tc-badge>Default badge</tc-badge>
+    <tc-badge [tcShape]="20">Round badge</tc-badge>
+    <tc-badge [view]="'accent'">Accent badge</tc-badge>
+    <tc-badge [view]="'success'">Success badge</tc-badge>
+    <tc-badge [view]="'info'">Info badge</tc-badge>
+    <tc-badge [view]="'warning'">Warning badge</tc-badge>
+    <tc-badge [view]="'error'">Error badge</tc-badge>
+    <tc-badge [tcGradient]="['#e24d4d', '#fe6666']">Gradient</tc-badge>
+    <tc-badge [outline]="true" [view]="'accent'">Accent outline</tc-badge>
+    <tc-badge [outline]="true" [view]="'success'">Success outline</tc-badge>
+    <tc-badge [outline]="true" [view]="'info'">Info outline</tc-badge>
+    <tc-badge [outline]="true" [view]="'warning'">Warning outline</tc-badge>
+    <tc-badge [outline]="true" [view]="'error'">Error outline</tc-badge>
+  </div>
+</tc-card>

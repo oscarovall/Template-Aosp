@@ -1,0 +1,137 @@
+<div class="row">
+	<div class="col-md-6">
+		<tc-card [title]="'Default'">
+			<tc-list class="mb-0">
+				<tc-list-item [title]="'Item title'">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor mattis massa, sed volutpat lacus bibendum eget.
+        </tc-list-item>
+
+				<tc-list-item [title]="'Consectetur adipiscing elit'">
+          Praesent imperdiet volutpat felis at mollis.
+        </tc-list-item>
+
+				<tc-list-item [title]="'Sed ut perspiciatis'">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </tc-list-item>
+
+				<tc-list-item [title]="'Lorem'">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </tc-list-item>
+			</tc-list>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6">
+		<tc-card [title]="'With images'">
+			<tc-list class="mb-0">
+        <tc-list-item [img]="'assets/content/avatar-55-2.jpg'" [title]="'Layla Harvey'">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit. Blanditiis, obcaecati.
+        </tc-list-item>
+
+        <tc-list-item [img]="'assets/content/avatar-55-1.jpg'" [title]="'Kyle Hopkins'">
+           Sed cursus quam mi, nec ornare quam pellentesque eget.
+        </tc-list-item>
+
+        <tc-list-item [img]="'assets/content/avatar-55-4.jpg'" [title]="'Elliot Hines'">
+          Vivamus malesuada molestie leo, sed mollis nisl bibendum quis. Praesent nisi urna, eleifend non luctus ac.
+        </tc-list-item>
+
+        <tc-list-item [img]="'assets/content/avatar-55-3.jpg'" [title]="'Sienna Mcdowell'">
+         Aliquam risus arcu, porttitor nec leo sit amet, sollicitudin semper metus.
+        </tc-list-item>
+			</tc-list>
+		</tc-card>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<tc-card [title]="'Custom colors'">
+			<tc-list class="mb-0">
+				<tc-list-item [tcBgColor]="'#FF924A'" [tcColor]="'#fff'" [title]="'Item title'">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor mattis massa, sed volutpat lacus bibendum eget.
+        </tc-list-item>
+
+				<tc-list-item [tcBgColor]="'#ff9751'" [tcColor]="'#fff'" [title]="'Consectetur adipiscing elit'">
+          Praesent imperdiet volutpat felis at mollis.
+        </tc-list-item>
+
+				<tc-list-item [tcBgColor]="'#ffa061'" [tcColor]="'#fff'" [title]="'Sed ut perspiciatis'">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </tc-list-item>
+
+				<tc-list-item [tcBgColor]="'#ffa86e'" [tcColor]="'#fff'" [title]="'Lorem'">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </tc-list-item>
+			</tc-list>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6">
+		<tc-card [title]="'Custom border style & color'">
+			<tc-list [tcBorderColor]="'#678cf9'" [tcBorderStyle]="'dashed'" class="mb-0">
+        <tc-list-item [img]="'assets/content/avatar-55-11.jpg'" [title]="'Libby Parry'">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit. Blanditiis, obcaecati.
+        </tc-list-item>
+
+        <tc-list-item [img]="'assets/content/avatar-55-6.jpg'"  [title]="'Truman Lyons'">
+          Sed cursus quam mi, nec ornare quam pellentesque eget.
+        </tc-list-item>
+
+        <tc-list-item [img]="'assets/content/avatar-55-10.jpg'" [title]="'Zac Clarke'">
+          Vivamus malesuada molestie leo, sed mollis nisl bibendum quis. Praesent nisi urna, eleifend non luctus ac.
+        </tc-list-item>
+
+        <tc-list-item [img]="'assets/content/avatar-55-9.jpg'" [title]="'Peyton Hicks'">
+          Aliquam risus arcu, porttitor nec leo sit amet, sollicitudin semper metus.
+        </tc-list-item>
+			</tc-list>
+		</tc-card>
+	</div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <tc-card [title]="'Striped'" class="mb-md-0">
+      <tc-list class="mb-0" [tcShape]="0">
+        <tc-list-item [tcBgColor]="'#061e38'" [title]="'Item title'">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor mattis massa, sed volutpat lacus bibendum eget.
+        </tc-list-item>
+
+        <tc-list-item [title]="'Consectetur adipiscing elit'">
+          Praesent imperdiet volutpat felis at mollis.
+        </tc-list-item>
+
+        <tc-list-item [tcBgColor]="'#061e38'" [title]="'Sed ut perspiciatis'">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </tc-list-item>
+
+        <tc-list-item [title]="'Lorem'">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </tc-list-item>
+      </tc-list>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6">
+    <tc-card [title]="'Custom shape'" class="mb-0">
+      <tc-list [tcBorderColor]="'#50bd35'" [tcBorderStyle]="'dotted'" [tcShape]="30" class="mb-0">
+        <tc-list-item [img]="'assets/content/avatar-55-11.jpg'" [title]="'Libby Parry'">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit. Blanditiis, obcaecati.
+        </tc-list-item>
+
+        <tc-list-item [img]="'assets/content/avatar-55-6.jpg'"  [title]="'Truman Lyons'">
+          Sed cursus quam mi, nec ornare quam pellentesque eget.
+        </tc-list-item>
+
+        <tc-list-item [img]="'assets/content/avatar-55-10.jpg'" [title]="'Zac Clarke'">
+          Vivamus malesuada molestie leo, sed mollis nisl bibendum quis. Praesent nisi urna, eleifend non luctus ac.
+        </tc-list-item>
+
+        <tc-list-item [img]="'assets/content/avatar-55-9.jpg'" [title]="'Peyton Hicks'">
+          Aliquam risus arcu, porttitor nec leo sit amet, sollicitudin semper metus.
+        </tc-list-item>
+      </tc-list>
+    </tc-card>
+  </div>
+</div>

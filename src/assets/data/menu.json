@@ -1,0 +1,403 @@
+[
+  {
+		"title": "Home",
+    "icon": "aosp-ui-home",
+    "routing": ""
+  },
+  {
+		"title": "Customer",
+		"icon": "aosp-ui-customer",
+    "badge": "3",
+    "badgeView": "info",
+		"sub": [
+			{
+				"title": "Deal process",
+				"routing": "deal-dashboard"
+			},
+			{
+				"title": "Leads",
+				"routing": "lead-dashboard"
+			},
+			{
+				"title": "Customers",
+				"routing": "customer-dashboard"
+			}
+		]
+  },
+  {
+		"title": "Inventory",
+    "icon": "aosp-ui-inventory",
+    "routing": "inventory-dashboard"
+  },
+  {
+		"title": "Service and repair",
+    "icon": "aosp-ui-serviceandrepair",
+    "routing": "serviceandrepair-dashboard"
+  },
+  {
+		"title": "Insurance",
+    "icon": "aosp-ui-insurance",
+    "routing": "insurance-dashboard"
+  },
+  {
+		"title": "Finance",
+    "icon": "aosp-ui-finance",
+    "routing": "finance-dashboard"
+  },
+  {
+		"title": "Real Estate",
+    "icon": "aosp-ui-realestate",
+    "routing": "realestate-dashboard"
+  },
+  {
+		"title": "Reports",
+    "icon": "aosp-ui-reports",
+    "routing": "report-dashboard"
+  },
+  {
+		"title": "Administration",
+		"icon": "aosp-ui-administration",
+    "badge": "7",
+    "badgeView": "info",
+		"sub": [
+			{
+				"title": "Company",
+				"routing": "company-admin"
+			},
+			{
+				"title": "Users",
+				"routing": "users-admin"
+			},
+			{
+				"title": "Roles",
+				"routing": "roles-admin"
+			},
+			{
+				"title": "Attributes",
+				"routing": "attributes-admin"
+			},
+			{
+				"title": "Products",
+				"routing": "products-admin"
+			},
+			{
+				"title": "Workflows",
+				"routing": "workflows-admin"
+      },
+      {
+				"title": "Emails",
+				"routing": "emails-admin"
+			}
+		]
+  },
+	{
+		"title": "Example Pages",
+		"groupTitle": true
+	},
+	{
+		"title": "Dashboards",
+		"icon": "icofont-ui-home",
+    "badge": "4",
+    "badgeView": "info",
+		"sub": [
+			{
+				"title": "Default",
+				"routing": "default-dashboard"
+			},
+			{
+				"title": "Analytical",
+				"routing": "analytical-dashboard"
+			},
+			{
+				"title": "Financial",
+				"routing": "financial-dashboard"
+			},
+			{
+				"title": "Travel",
+				"routing": "travel-dashboard"
+			}
+		]
+	},
+	{
+		"title": "Apps",
+		"icon": "icofont-database",
+		"sub": [
+			{
+				"title": "Calendar",
+				"routing": "calendar"
+			},
+			{
+				"title": "Chat",
+				 "routing": "chat"
+			},
+      {
+        "title": "Contacts",
+        "routing": "contacts"
+      },
+			{
+				"title": "Inbox",
+				"routing": "inbox"
+			},
+			{
+				"title": "Taskboard",
+				"routing": "taskboard"
+			},
+			{
+				"title": "Todo List",
+				"routing": "todo-list"
+			},
+			{
+				"title": "Users",
+				"routing": "users"
+			}
+		]
+	},
+	{
+		"icon": "icofont-layers",
+		"title": "Widgets",
+    "badge": "50+",
+    "badgeView": "success",
+		"sub": [
+			{
+				"title": "Chart Widgets",
+				"routing": "chart-widgets"
+			},
+			{
+				"title": "Data Widgets",
+				"routing": "data-widgets"
+			},
+			{
+				"title": "Media Widgets",
+				"routing": "media-widgets"
+			}
+		]
+	},
+  {
+    "title": "UI KIt",
+    "groupTitle": true
+  },
+	{
+		"title": "UI elements",
+		"icon": "icofont-library",
+    "badge": "HOT",
+    "badgeView": "error",
+		"sub": [
+      {
+        "title": "Accordions",
+        "routing": "accordions"
+			},
+			{
+				"title": "Alerts",
+				"routing": "alerts"
+			},
+      {
+        "title": "Autocompletes",
+        "routing": "autocompletes"
+			},
+			{
+				"title": "Badges",
+				"routing": "badges"
+			},
+      {
+        "title": "Buttons",
+        "routing": "buttons"
+      },
+      {
+        "title": "Cards",
+        "routing": "cards"
+      },
+      {
+        "title": "Checkboxes",
+        "routing": "checkboxes"
+			},
+			{
+				"title": "Dropdowns",
+				"routing": "dropdowns"
+			},
+      {
+        "title": "Inputs",
+        "routing": "inputs"
+      },
+      {
+        "title": "Lists",
+        "routing": "lists"
+			},
+			{
+				"title": "Notifications",
+				"routing": "notifications"
+			},
+      {
+        "title": "Progress",
+        "routing": "progress"
+      },
+      {
+        "title": "Radio buttons",
+        "routing": "radio-buttons"
+			},
+			{
+				"title": "Ratings",
+				"routing": "ratings"
+			},
+			{
+				"title": "Selects",
+				"routing": "selects"
+			},
+			{
+				"title": "Sliders",
+				"routing": "sliders"
+			},
+      {
+        "title": "Switcher",
+        "routing": "switchers"
+      },
+      {
+        "title": "Tabs",
+        "routing": "tabs"
+      },
+      {
+        "title": "Textareas",
+        "routing": "textareas"
+      },
+      {
+        "title": "Vertical timeline",
+        "routing": "v-timeline"
+      }
+    ]
+	},
+	{
+		"icon": "icofont-pencil-alt-2",
+		"routing": "typography",
+		"title": "Typography"
+	},
+  {
+    "icon": "icofont-paint",
+    "routing": "icons",
+    "title": "Icons"
+  },
+  {
+    "title": "Forms",
+    "icon": "icofont-id-card",
+    "badge": "NEW",
+    "badgeView": "warning",
+    "sub": [
+      {
+        "title": "Form elements",
+        "routing": "form-elements"
+      },
+      {
+        "title": "Form layout",
+        "routing": "form-layout"
+      },
+      {
+        "title": "Form validation",
+        "routing": "form-validation"
+			},
+			{
+				"title": "Form Wizard",
+				"routing": "form-wizard"
+			}
+    ]
+  },
+	{
+		"title": "Tables",
+		"icon": "icofont-table",
+		"sub": [
+			{
+				"title": "Simple Tables",
+				"routing": "simple-tables"
+			},
+			{
+				"title": "Filter Table",
+				"routing": "filter-table"
+			},
+			{
+				"title": "Sorting Table",
+				"routing": "sorting-table"
+			},
+			{
+				"title": "Search Table",
+				"routing": "search-table"
+			},
+			{
+				"title": "Pagination Table",
+				"routing": "pagination-table"
+			}
+		]
+	},
+	{
+    "title": "Maps",
+    "icon": "icofont-map-pins",
+		"sub": [
+			{
+				"title": "Google Maps",
+				"routing": "google-maps"
+			},
+			{
+				"title": "Leaflet maps",
+				"routing": "leaflet-maps"
+			}
+		]
+	},
+	{
+		"title": "Charts",
+		"icon": "icofont-bars",
+		"sub": [
+			{
+				"title": "Ng2 Charts",
+				"routing": "ng2-charts"
+			},
+			{
+				"title": "Ngx Charts",
+				 "routing": "ngx-charts"
+			}
+		]
+	},
+  {
+    "title": "Pages",
+    "groupTitle": true
+  },
+  {
+		"title": "Service pages",
+    "icon": "icofont-education",
+    "sub": [
+      {
+        "title": "Pricing",
+        "routing": "pricing"
+      },
+      {
+        "title": "Invoice",
+        "routing": "invoice"
+      },
+      {
+        "title": "FAQ",
+        "routing": "faq"
+      },
+      {
+        "title": "Timeline",
+        "routing": "timeline"
+      }
+    ]
+	},
+	{
+		"icon": "icofont-calculations",
+		"title": "Extra pages",
+		"sub": [
+			{
+				"title": "Log In",
+				"routing": "/extra/log-in"
+			},
+			{
+				"title": "Sign Up",
+				"routing": "/extra/sign-up"
+			},
+			{
+				"title": "404 Page",
+				"routing": "/extra/404"
+			},
+			{
+				 "title": "500 Page",
+				 "routing": "/extra/500"
+			}
+		]
+	}
+]

@@ -1,0 +1,193 @@
+<div class="row">
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Wizard'">
+			<tc-tabs #tabs1 [title]="'Simple Wizard'" [selectedTab]="tabs1.selectedTab">
+				<tc-tab [tabTitle]="'Personal'">
+					<tc-form-group>
+						<tc-form-label>First Name</tc-form-label>
+						<tc-input></tc-input>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-form-label>Last Name</tc-form-label>
+						<tc-input></tc-input>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-form-label>Email</tc-form-label>
+						<tc-input></tc-input>
+					</tc-form-group>
+				</tc-tab>
+
+				<tc-tab [tabTitle]="'Bio'">
+					<tc-form-group>
+						<tc-form-label>Bio</tc-form-label>
+						<tc-textarea [height]="220"></tc-textarea>
+					</tc-form-group>
+				</tc-tab>
+
+				<tc-tab [tabTitle]="'Submit'">
+					<tc-form-group>
+						<tc-form-label>Profession</tc-form-label>
+						<tc-select [options]="options" [placeholder]="'Profession'"></tc-select>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-form-label>Comment</tc-form-label>
+						<tc-textarea [height]="100"></tc-textarea>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-checkbox>Agree with <a href="" (click)="$event.preventDefault()">Terms and conditions</a></tc-checkbox>
+					</tc-form-group>
+				</tc-tab>
+			</tc-tabs>
+
+			<tc-form-group class="mb-0">
+				<div class="d-flex justify-content-between pt-4">
+          <button [disabled]="tabs1.selectedTab == 1" tc-button (click)="tabs1.selectedTab = tabs1.selectedTab - 1"> Previous</button>
+          <button *ngIf="tabs1.selectedTab < tabs1.max" tc-button (click)="tabs1.selectedTab = tabs1.selectedTab + 1"> Next</button>
+          <button *ngIf="tabs1.selectedTab == tabs1.max" tc-button [view]="'success'" [beforeIcon]="'icofont-check'">Submit</button>
+				</div>
+			</tc-form-group>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Simple Wizard'">
+			<tc-tabs #tabs2 [title]="'Wizard'" [view]="'alternative'" [selectedTab]="tabs2.selectedTab">
+				<tc-tab [tabTitle]="'Personal'">
+					<tc-form-group>
+						<tc-input [placeholder]="'First Name'"></tc-input>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-input [placeholder]="'Last Name'"></tc-input>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-input [placeholder]="'Email'"></tc-input>
+					</tc-form-group>
+				</tc-tab>
+
+				<tc-tab [tabTitle]="'Bio'">
+					<tc-form-group>
+						<tc-textarea [placeholder]="'Bio'" [height]="160"></tc-textarea>
+					</tc-form-group>
+				</tc-tab>
+
+				<tc-tab [tabTitle]="'Submit'">
+					<tc-form-group>
+						<tc-select [options]="options" [placeholder]="'Profession'"></tc-select>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-textarea [placeholder]="'Comment'" [height]="70"></tc-textarea>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-checkbox>Agree with <a href="" (click)="$event.preventDefault()">Terms and conditions</a></tc-checkbox>
+					</tc-form-group>
+				</tc-tab>
+			</tc-tabs>
+
+			<tc-form-group class="mb-0">
+				<div class="d-flex justify-content-between pt-4">
+					<button [disabled]="tabs2.selectedTab == 1" tc-button (click)="tabs2.selectedTab = tabs2.selectedTab - 1"> Previous</button>
+					<button *ngIf="tabs2.selectedTab < tabs2.max" tc-button (click)="tabs2.selectedTab = tabs2.selectedTab + 1"> Next</button>
+					<button *ngIf="tabs2.selectedTab == tabs2.max" tc-button [view]="'success'" [beforeIcon]="'icofont-check'">Submit</button>
+				</div>
+			</tc-form-group>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Wizard with progress bar'" class="mb-md-0">
+			<tc-progress [progress]="setProgress(tabs3.selectedTab)"></tc-progress>
+			<tc-tabs #tabs3 [title]="'Wizard'" [selectedTab]="tabs3.selectedTab">
+				<tc-tab [tabTitle]="'Personal'">
+					<tc-form-group>
+						<tc-form-label>First Name</tc-form-label>
+						<tc-input></tc-input>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-form-label>Last Name</tc-form-label>
+						<tc-input></tc-input>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-form-label>Email</tc-form-label>
+						<tc-input></tc-input>
+					</tc-form-group>
+				</tc-tab>
+
+				<tc-tab [tabTitle]="'Bio'">
+					<tc-form-group>
+						<tc-form-label>Bio</tc-form-label>
+						<tc-textarea [height]="220"></tc-textarea>
+					</tc-form-group>
+				</tc-tab>
+
+				<tc-tab [tabTitle]="'Submit'">
+					<tc-form-group>
+						<tc-form-label>Profession</tc-form-label>
+						<tc-select [options]="options" [placeholder]="'Profession'"></tc-select>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-form-label>Comment</tc-form-label>
+						<tc-textarea [height]="100"></tc-textarea>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-checkbox>Agree with <a href="" (click)="$event.preventDefault()">Terms and conditions</a></tc-checkbox>
+					</tc-form-group>
+				</tc-tab>
+			</tc-tabs>
+
+			<tc-form-group class="mb-0">
+				<div class="d-flex justify-content-between pt-4">
+					<button [disabled]="tabs3.selectedTab == 1" tc-button (click)="tabs3.selectedTab = tabs3.selectedTab - 1"> Previous</button>
+					<button *ngIf="tabs3.selectedTab < tabs3.max" tc-button (click)="tabs3.selectedTab = tabs3.selectedTab + 1"> Next</button>
+					<button *ngIf="tabs3.selectedTab == tabs3.max" tc-button [view]="'success'" [beforeIcon]="'icofont-check'">Submit</button>
+				</div>
+			</tc-form-group>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Wizard with progress bar'" class="mb-0">
+			<tc-progress [progress]="setProgress(tabs4.selectedTab)"></tc-progress>
+			<tc-tabs #tabs4 [title]="'Wizard'" [view]="'alternative'" [selectedTab]="tabs4.selectedTab">
+				<tc-tab [tabTitle]="'Personal'">
+          <tc-form-group>
+            <tc-input [placeholder]="'First Name'"></tc-input>
+          </tc-form-group>
+          <tc-form-group>
+            <tc-input [placeholder]="'Last Name'"></tc-input>
+          </tc-form-group>
+          <tc-form-group>
+            <tc-input [placeholder]="'Email'"></tc-input>
+          </tc-form-group>
+				</tc-tab>
+
+				<tc-tab [tabTitle]="'Bio'">
+					<tc-form-group>
+						<tc-textarea [placeholder]="'Bio'" [height]="160"></tc-textarea>
+					</tc-form-group>
+				</tc-tab>
+
+				<tc-tab [tabTitle]="'Submit'">
+					<tc-form-group>
+						<tc-select [options]="options" [placeholder]="'Profession'"></tc-select>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-textarea [placeholder]="'Comment'" [height]="70"></tc-textarea>
+					</tc-form-group>
+					<tc-form-group>
+						<tc-checkbox>Agree with
+							<a href="" (click)="$event.preventDefault()">Terms and conditions</a>
+						</tc-checkbox>
+					</tc-form-group>
+				</tc-tab>
+			</tc-tabs>
+
+			<tc-form-group class="mb-0">
+				<div class="d-flex justify-content-between pt-4">
+          <button [disabled]="tabs4.selectedTab == 1" tc-button (click)="tabs4.selectedTab = tabs4.selectedTab - 1"> Previous</button>
+          <button *ngIf="tabs4.selectedTab < tabs4.max" tc-button (click)="tabs4.selectedTab = tabs4.selectedTab + 1"> Next</button>
+          <button *ngIf="tabs4.selectedTab == tabs4.max" tc-button [view]="'success'" [beforeIcon]="'icofont-check'">Submit</button>
+				</div>
+			</tc-form-group>
+		</tc-card>
+	</div>
+</div>

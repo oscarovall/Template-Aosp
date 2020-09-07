@@ -1,0 +1,59 @@
+<tc-card class="mb-0">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Notification Position</tc-form-label>
+        <tc-select [selected]="'bottomRight'" [formControl]="position" [options]="positions"></tc-select>
+      </tc-form-group>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Notification Title</tc-form-label>
+        <tc-input [formControl]="title"></tc-input>
+      </tc-form-group>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Notification Apear Animation</tc-form-label>
+        <tc-select [selected]="'fromTop'" [formControl]="animation" [options]="animations"></tc-select>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Notification Hide Timeout</tc-form-label>
+        <tc-input [innerValue]="5000" [type]="'number'" [formControl]="hideTimeout"></tc-input>
+      </tc-form-group>
+    </div>
+  </div>
+
+	<tc-form-group>
+		<tc-form-label>Notification View</tc-form-label>
+		<tc-select [selected]="'default'" [formControl]="view" [options]="views"></tc-select>
+	</tc-form-group>
+
+  <div class="row" [formGroup]="radioGroup">
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Show progress bar</tc-form-label>
+        <tc-switcher formControlName="progress" [value]="true">Show</tc-switcher>
+      </tc-form-group>
+    </div>
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Autohide Notification</tc-form-label>
+        <tc-switcher formControlName="autohide" [value]="true">Auto hide</tc-switcher>
+      </tc-form-group>
+    </div>
+  </div>
+
+	<tc-form-group>
+		<tc-form-label>Notification Content</tc-form-label>
+		<tc-textarea [formControl]="content"></tc-textarea>
+	</tc-form-group>
+
+	<button tc-button (click)="addNotification()">Add notification</button>
+</tc-card>

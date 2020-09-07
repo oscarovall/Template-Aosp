@@ -1,0 +1,89 @@
+@import "~assets/sass/variables";
+
+:host {
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	.media-card {
+		.media-card-icon {
+			color: #fff;
+			cursor: pointer;
+			font-size: 4em;
+			margin-bottom: $module-rem;
+		}
+		.media-card_text {
+			color:#fff;
+			font-size: 1.3em;
+			margin: 0;
+		}
+		.media-card-sub-text {
+			color: #fff;
+			opacity: .8;
+		}
+	}
+	.graph-card {
+		.media-card-icon {
+			font-size: 1.3em;
+			color: inherit;
+		}
+		.graph-card_sub-text {
+			color: #fff;
+			opacity: 0.8;
+		}
+	}
+	.article-card {
+		align-items: stretch;
+		display: flex;
+
+		::ng-deep .card-content {
+			background: rgba(#000,.7);
+		}
+		.article-card-title {
+			align-items: flex-start;
+			display: flex;
+			flex-direction: column;
+			padding-top: 5 * $module-rem;
+
+			.title-main {
+				font-size: 1.8rem;
+				margin-bottom: $module-rem / 2;
+			}
+		}
+		.article-card-actions {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100%;
+
+			.action {
+				display: flex;
+				opacity: .8;
+				justify-content: space-between;
+				transition: opacity .3s $animation;
+
+				> * {
+					cursor: pointer;
+					color: #fff;
+					font-size: 1.2em;
+					font-weight: lighter;
+					padding-left: $module-rem/2;
+				}
+				.icon {
+					&:not(:first-child) {
+						margin-left: $module-rem/2;
+					}
+				}
+				&:hover {
+						opacity: 1;
+				}
+			}
+		}
+	}
+	canvas {
+		height: auto !important;
+		margin-right: - (2 * $module-rem);
+		max-width: 1350px;
+		width: 100% !important;
+	}
+}

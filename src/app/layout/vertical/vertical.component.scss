@@ -1,0 +1,18 @@
+@import '~assets/sass/variables';
+
+:host {
+  .layout-wrap {
+    .nav-bar {
+      // padding-left: $side-bar-width;
+      @media #{$max767} {
+        padding-left: 0;
+      }
+    }
+    .main {
+      padding-left: $side-bar-width + 0.1;
+      @media #{$max767} {
+        padding-left: 0 !important;
+      }
+    }
+  }
+}

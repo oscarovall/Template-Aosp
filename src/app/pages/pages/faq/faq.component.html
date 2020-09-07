@@ -1,0 +1,49 @@
+<tc-card class="mb-0">
+	<div class="title-box">
+		<h1 class="h2" [tcColor]="'#FF8534'">FAQ's</h1>
+
+		<p [tcColor]="'rgba(255,255,255,0.8)'">frequently asked questions</p>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<h3 class="h5 section-title">General</h3>
+
+      <tc-accordion>
+        <tc-panel *ngFor="let panel of panels" [title]="panel.title" [titleIcon]="'icofont-question'">
+          {{ panel.desc }}
+        </tc-panel>
+      </tc-accordion>
+		</div>
+
+		<div class="col-md-6 col-sm-12">
+      <h3 class="h5 section-title">Business</h3>
+
+      <tc-accordion>
+        <tc-panel *ngFor="let panel of panels" [title]="panel.title" [titleIcon]="'icofont-question'">
+          {{ panel.desc }}
+        </tc-panel>
+      </tc-accordion>
+		</div>
+
+		<div class="col-md-6 col-sm-12">
+			<h3 class="h5 section-title">Marketplace</h3>
+
+      <tc-accordion>
+        <tc-panel *ngFor="let panel of panels" [title]="panel.title" [titleIcon]="'icofont-question'">
+          {{ panel.desc }}
+        </tc-panel>
+      </tc-accordion>
+		</div>
+
+		<div class="col-md-6 col-sm-12">
+			<h3 class="h5 section-title">Privacy & Policy</h3>
+
+      <tc-accordion>
+        <tc-panel *ngFor="let panel of panels" [title]="panel.title" [titleIcon]="'icofont-question'">
+          {{ panel.desc }}
+        </tc-panel>
+      </tc-accordion>
+		</div>
+	</div>
+</tc-card>

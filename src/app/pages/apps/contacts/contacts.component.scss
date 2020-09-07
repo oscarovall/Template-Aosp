@@ -1,0 +1,9 @@
+@import '~assets/sass/variables';
+
+$border: 1px solid rgba( #000, .15);
+$img-size: 10 * $module;
+$sidebar-width: 18*$module;
+
+:host {
+	flex: 1;
+}

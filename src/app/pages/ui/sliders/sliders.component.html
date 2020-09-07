@@ -1,0 +1,160 @@
+<div class="row">
+  <div class="col-12 col-md-6">
+    <tc-card [title]="'Basic'">
+      <tc-form-group>
+        <tc-slider #slider2 [value]="50"></tc-slider>
+      </tc-form-group>
+      <tc-input #input2 [type]="'number'" [(ngModel)]="slider2.value"></tc-input>
+    </tc-card>
+  </div>
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Range'">
+			<tc-form-group>
+        <tc-slider #slider [range]="true" [value]="[40, 80]"></tc-slider>
+      </tc-form-group>
+			<div class="row">
+				<div class="col-6">
+          <tc-input [readonly]="true" [type]="'number'" [(ngModel)]="slider.value[0]"></tc-input>
+        </div>
+				<div class="col-6">
+          <tc-input [readonly]="true" [type]="'number'" [(ngModel)]="slider.value[1]"></tc-input>
+        </div>
+			</div>
+		</tc-card>
+	</div>
+
+  <div class="col-12 col-md-6">
+    <tc-card [title]="'With tooltips'">
+      <tc-slider [tooltip]="true" [value]="20"></tc-slider>
+    </tc-card>
+  </div>
+  <div class="col-12 col-md-6">
+    <tc-card [title]="'Range with tooltip'">
+      <tc-slider [range]="true" [value]="[10, 90]" [tooltip]="true"></tc-slider>
+    </tc-card>
+  </div>
+
+  <div class="col-12 col-md-6">
+    <tc-card [title]="'Min/max value'">
+      <tc-slider [tooltip]="true" [min]="1000" [value]="2000" [max]="3000"></tc-slider>
+    </tc-card>
+  </div>
+  <div class="col-12 col-md-6">
+    <tc-card [title]="'Range with min/max values'">
+      <tc-slider [range]="true" [value]="[1990, 2017]" [tooltip]="true" [min]="1900" [max]="2018"></tc-slider>
+    </tc-card>
+  </div>
+
+  <div class="col-12 col-md-6">
+    <tc-card [title]="'Step'">
+      <tc-slider [tooltip]="true" [step]="10" [value]="17"></tc-slider>
+    </tc-card>
+  </div>
+  <div class="col-12 col-md-6">
+    <tc-card [title]="'Range step'">
+      <tc-slider [range]="true" [value]="[30, 70]" [tooltip]="true" [step]="2"></tc-slider>
+    </tc-card>
+  </div>
+
+  <div class="col-12">
+    <tc-card [title]="'Custom style'">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <tc-form-group>
+            <tc-slider [value]="63" [accentColor]="'#678cf9'"></tc-slider>
+          </tc-form-group>
+          <tc-form-group class="mb-md-0">
+            <tc-slider [value]="25" [accentColor]="'#50bd35'"></tc-slider>
+          </tc-form-group>
+        </div>
+        <div class="col-12 col-md-6">
+          <tc-form-group>
+            <tc-slider [value]="70" [accentColor]="'#faa110'"></tc-slider>
+          </tc-form-group>
+          <tc-form-group class="mb-0">
+            <tc-slider [value]="63" [accentColor]="'#ec2427'"></tc-slider>
+          </tc-form-group>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'With dots and marks'">
+      <tc-form-group>
+			  <tc-slider [accentColor]="'#000'" [labels]="['A', 'B', 'C']" [dots]="[40]" [value]="40"></tc-slider>
+      </tc-form-group>
+      <tc-form-group>
+			  <tc-slider
+          [accentColor]="'#e24d4d'"
+          [labels]="['Start', 'Progress', 'Finish']"
+          [dots]="[60]"
+          [value]="60"
+        ></tc-slider>
+      </tc-form-group>
+      <tc-form-group>
+			  <tc-slider
+          [accentColor]="'#faa110'"
+          [labels]="['1988', '1994', '2002', '2010', '2018']"
+          [dots]="[25, 50, 75]"
+          [range]="true"
+          [value]="[25,75]"
+        ></tc-slider>
+      </tc-form-group>
+		</tc-card>
+	</div>
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Vertical sliders'">
+			<div class="d-flex flex-row justify-content-center">
+				<tc-slider
+          [direction]="'vertical'"
+          [dots]="[25, 50, 75]"
+          [value]="60"
+          [width]="50"
+        ></tc-slider>
+				<tc-slider
+          [direction]="'vertical'"
+          [accentColor]="'#e24d4d'"
+          [range]="true"
+          [value]="[20, 70]"
+          [width]="50"
+        ></tc-slider>
+        <tc-slider
+          [direction]="'vertical'"
+          [accentColor]="'#50bd35'"
+          [labels]="['1000', '2000', '3000']"
+          [dots]="[2000]"
+          [min]="1000"
+          [value]="1500"
+          [max]="3000"
+        ></tc-slider>
+			</div>
+		</tc-card>
+	</div>
+</div>
+
+<tc-card [title]="'Forms'" class="mb-0">
+  <div class="row mt-4">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <form [formGroup]="reactiveForm" novalidate>
+        <tc-form-group>
+          <tc-form-label>Reactive form</tc-form-label>
+
+          <tc-slider formControlName="field"></tc-slider>
+        </tc-form-group>
+      </form>
+
+      <tc-input [readonly]="true" [(ngModel)]="reactiveForm.value.field"></tc-input>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Template driven form</tc-form-label>
+
+        <tc-slider #templateForm [value]="25"></tc-slider>
+      </tc-form-group>
+
+      <tc-input [readonly]="true" [(ngModel)]="templateForm.value"></tc-input>
+    </div>
+  </div>
+</tc-card>

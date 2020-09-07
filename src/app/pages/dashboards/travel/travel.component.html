@@ -1,0 +1,232 @@
+<div class="row">
+	<div class="col-sm-6 col-md-4  col-xl-2">
+		<tc-card [tcBgColor]="'#00b36a'" class="media-card">
+			<div class="d-flex flex-column align-items-center">
+				<i class="media-card-icon icofont-book"></i>
+				<p class="media-card-text mb-0">Articles</p>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-sm-6 col-md-4  col-xl-2">
+		<tc-card [tcBgColor]="'#fe9214'" class="media-card">
+			<div class="d-flex flex-column align-items-center">
+				<i class="media-card-icon icofont-plus-circle"></i>
+				<p class="media-card-text mb-0">Add new</p>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-sm-6 col-md-4  col-xl-2">
+		<tc-card [tcBgColor]="'#0ccbff'" class="media-card">
+			<div class="d-flex flex-column align-items-center">
+				<i class="media-card-icon icofont-speech-comments"></i>
+				<p class="media-card-text mb-0">Comment</p>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-sm-6 col-md-4  col-xl-2">
+		<tc-card [tcBgColor]="'#547ffe'" class="media-card">
+			<div class="d-flex flex-column align-items-center">
+				<i class="media-card-icon icofont-search"></i>
+				<p class="media-card-text mb-0">Search</p>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-sm-6 col-md-4  col-xl-2">
+		<tc-card [tcBgColor]="'#ff595f'" class="media-card">
+			<div class="d-flex flex-column align-items-center">
+				<i class="media-card-icon icofont-users"></i>
+				<p class="media-card-text mb-0">Users</p>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-sm-6 col-md-4  col-xl-2">
+		<tc-card [tcBgColor]="'#b6c8fe'" class="media-card">
+			<div class="d-flex flex-column align-items-center">
+				<i class="media-card-icon icofont-gear"></i>
+				<p class="media-card-text mb-0">Settings</p>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-lg-4">
+		<tc-card class="article-card" [bgImg]="'../../../../assets/content/travel-1.jpg'">
+			<div class="article-card-actions">
+				<div class="action">
+					<div class="icon">
+						<i class="icofont-book"></i>
+					</div>
+					<div class="text">Read</div>
+				</div>
+				<div class="action">
+					<div class="icon">
+						<i class="icofont-speech-comments"></i>
+					</div>
+					<div class="text">55</div>
+					<div class="icon">
+						<i class="icofont-eye"></i>
+					</div>
+					<div class="text">2254</div>
+				</div>
+			</div>
+			<div class="article-card-title" [tcColor]="'#fff'">
+				<p class="title-main">Explore the world</p>
+				<p class="title-sub mb-0">Discover and archive new experience</p>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6 col-lg-4">
+		<tc-card class="article-card" [bgImg]="'../../../../assets/content/travel-2.jpg'">
+			<div class="article-card-actions">
+				<div class="action">
+					<div class="icon">
+						<i class="icofont-book"></i>
+					</div>
+					<div class="text">Read</div>
+				</div>
+				<div class="action">
+					<div class="icon">
+						<i class="icofont-speech-comments"></i>
+					</div>
+					<div class="text">31</div>
+					<div class="icon">
+						<i class="icofont-eye"></i>
+					</div>
+					<div class="text">431</div>
+				</div>
+			</div>
+			<div class="article-card-title" [tcColor]="'#fff'">
+				<p class="title-main">Explore the world</p>
+				<p class="title-sub mb-0">Discover and archive new experience</p>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6 col-lg-4">
+		<tc-card class="article-card" [bgImg]="'../../../../assets/content/travel-3.jpg'">
+			<div class="article-card-actions">
+				<div class="action">
+					<div class="icon">
+						<i class="icofont-book"></i>
+					</div>
+					<div class="text">Read</div>
+				</div>
+				<div class="action">
+					<div class="icon">
+						<i class="icofont-speech-comments"></i>
+					</div>
+					<div class="text">25</div>
+					<div class="icon">
+						<i class="icofont-eye"></i>
+					</div>
+					<div class="text">1254</div>
+				</div>
+			</div>
+			<div class="article-card-title" [tcColor]="'#fff'">
+				<p class="title-main">Explore the world</p>
+				<p class="title-sub mb-0">Discover and archive new experience</p>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-8">
+		<tc-card [bgImg]="'../../../../assets/content/travel-4.jpg'" [padding]="0">
+			<div [style.height]="'465px'" class="d-flex justify-items-end">
+				<canvas
+					baseChart
+					[datasets]="chartData"
+					[options]="lineChartOptions"
+					[colors]="mainColor"
+					[legend]="false"
+					[chartType]="'line'"
+      	></canvas>
+      </div>	
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-4">
+		<tc-list [tcBgColor]="'#2c435b'">
+			<tc-list-item [tcColor]="'#81c784'">
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="d-flex flex-column">
+						<span class="media-card-icon" [tcFontSize]="'1.5rem'">Users online</span>
+						<span class="graph-card-sub-text" [tcColor]="'rgba(255,255,255,0.6)'">25</span>
+					</div>
+
+					<tc-icon [iconClass]="'icofont-users'" [tcFontSize]="'3rem'"></tc-icon>
+				</div>
+			</tc-list-item>
+
+			<tc-list-item [tcColor]="'#e24d4d'">
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="d-flex flex-column">
+						<span class="media-card-icon" [tcFontSize]="'1.5rem'">Messages</span>
+						<span class="graph-card-sub-text" [tcColor]="'rgba(255,255,255,0.6)'">12</span>
+					</div>
+
+					<tc-icon [iconClass]="'icofont-envelope'" [tcFontSize]="'3rem'"></tc-icon>
+				</div>
+			</tc-list-item>
+
+			<tc-list-item [tcColor]="'#64b5f6'">
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="d-flex flex-column">
+						<span class="media-card-icon" [tcFontSize]="'1.5rem'">Earning</span>
+						<span class="graph-card-sub-text" [tcColor]="'rgba(255,255,255,0.6)'">$925</span>
+					</div>
+
+					<tc-icon [iconClass]="'icofont-chart-histogram'" [tcFontSize]="'3rem'"></tc-icon>
+				</div>
+			</tc-list-item>
+
+			<tc-list-item [tcColor]="'#FF8534'">
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="d-flex flex-column">
+						<span class="media-card-icon" [tcFontSize]="'1.5rem'">Articles</span>
+						<span class="graph-card-sub-text" [tcColor]="'rgba(255,255,255,0.6)'">47</span>
+					</div>
+
+					<tc-icon [iconClass]="'icofont-book'" [tcFontSize]="'3rem'"></tc-icon>
+				</div>
+			</tc-list-item>
+		</tc-list>
+	</div>
+
+	<div class="col-sm-12 col-md-4">
+		<tc-card class="media-card mb-md-0">
+			<div class="d-flex flex-column align-items-center">
+				<i class="media-card-icon icofont-ui-calendar"></i>
+				<p class="media-card-text">9 Todo for today</p>
+				<p class="media-card-sub-text">Manage them in your calendar</p>
+				<button tc-button [beforeIcon]="'icofont-gear'">Manage your todo's</button>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-sm-12 col-md-4">
+		<tc-card class="media-card mb-md-0">
+			<div class="d-flex flex-column align-items-center">
+				<i class="media-card-icon icofont-envelope-open"></i>
+				<p class="media-card-text">23 Unread Messages</p>
+				<p class="media-card-sub-text">Check them in your's inbox</p>
+				<button tc-button [beforeIcon]="'icofont-envelope'">Go To Inbox</button>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-sm-12 col-md-4">
+		<tc-card class="media-card mb-0">
+			<div class="d-flex flex-column align-items-center">
+				<i class="media-card-icon icofont-ui-user"></i>
+				<p class="media-card-text">42 New Users</p>
+				<p class="media-card-sub-text">Find them in your users list</p>
+				<button tc-button [beforeIcon]="'icofont-users'">Go Users List</button>
+			</div>
+		</tc-card>
+	</div>
+</div>

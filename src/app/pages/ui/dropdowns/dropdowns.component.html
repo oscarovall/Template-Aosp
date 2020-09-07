@@ -1,0 +1,286 @@
+<div class="row">
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Basic dropdown'">
+			<div class="d-flex justify-content-between flex-wrap">
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" tc-button>Basic dropdown</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fade'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" [view]="'success'" tc-button>Basic dropdown</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fade'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" [view]="'warning'" tc-button>Basic dropdown</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fadeInUp'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+			  <tc-dropdown>
+				  <tc-dropdown-button>
+					  <button [afterIcon]="'icofont-expand-alt'" [view]="'error'" tc-button>Basic dropdown</button>
+					</tc-dropdown-button>
+
+				  <tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fade'">
+					  <tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+					  </tc-list>
+				  </tc-dropdown-content>
+			  </tc-dropdown>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Content alignment'">
+			<div class="d-flex justify-content-between flex-wrap">
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" [view]="'error'"  tc-button>Left alignment</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fade'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" [view]="'info'" tc-button>Right alignment</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'right'" [animation]="'fade'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>			
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12">
+		<tc-card [title]="'Dropdown animations'">
+			<div class="d-flex justify-content-between flex-wrap">
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" tc-button>Fade</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fade'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" tc-button>Fade in up</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fadeInUp'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+					<button [afterIcon]="'icofont-expand-alt'" tc-button >Fade in down</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'right'" [animation]="'fadeInDown'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+					<button [afterIcon]="'icofont-expand-alt'" tc-button>Fade in left</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fadeInLeft'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" tc-button>Fade in right</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'right'" [animation]="'fadeInRight'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" tc-button>Zoom</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'right'" [animation]="'zoom'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>				
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Dropdown overlay'" class="mb-md-0">
+			<div class="d-flex justify-content-between flex-wrap">
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" tc-button>With overlay</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fade'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown class="mb-2">
+					<tc-dropdown-button>
+						<button [afterIcon]="'icofont-expand-alt'" tc-button>Without overlay</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [overlay]="false" [animation]="'fadeInUp'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Custom buttons'" class="mb-0">
+			<div class="d-flex justify-content-between flex-wrap">
+				<tc-dropdown>
+					<tc-dropdown-button>
+						<button [view]="'success'" tc-button>Custom button</button>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'left'" [animation]="'fade'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown>
+					<tc-dropdown-button>
+						<img src="/assets/content/avatar-55-6.jpg" height="55" width="55" [tcShape]="'50%'">
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'right'" [animation]="'fade'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+
+				<tc-dropdown>
+					<tc-dropdown-button>
+						<tc-icon [iconClass]="'icofont-notification'" [tcFontSize]="20" [tcColor]="['#fff', '#FF8534']" class="marker bg-red"></tc-icon>
+					</tc-dropdown-button>
+
+					<tc-dropdown-content [appendToBody]="true" [align]="'right'" [overlay]="false" [animation]="'fadeInUp'">
+						<tc-list class="mb-0">
+							<tc-list-item><a href="#">Dropdown item 1</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 2</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 3</a></tc-list-item>
+							<tc-list-item><a href="#">Dropdown item 4</a></tc-list-item>
+						</tc-list>
+					</tc-dropdown-content>
+				</tc-dropdown>
+			</div>
+		</tc-card>
+	</div>
+</div>

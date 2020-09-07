@@ -1,0 +1,35 @@
+span {
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.43;
+	letter-spacing: normal;
+	text-align: left;
+    color: #eae5eb;
+    margin: 1em;
+    margin-bottom: 2em;
+}
+
+
+hr{
+    margin: 0;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #5a6aa5;
+
+}
+
+.line{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.icon {
+    cursor: pointer !important;
+}
+tc-checkbox.line {
+    cursor: pointer !important;
+}

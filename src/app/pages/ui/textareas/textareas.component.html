@@ -1,0 +1,194 @@
+<div class="row">
+  <div class="col-md-6">
+    <tc-card [title]="'Basic'">
+      <tc-form-group>
+        <tc-textarea [innerValue]="'Value'"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea [placeholder]="'With placeholder'"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-form-label>Textarea label</tc-form-label>
+
+        <tc-textarea [placeholder]="'With label'"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-textarea [placeholder]="'With description'"></tc-textarea>
+
+        <tc-form-description>Textarea description</tc-form-description>
+      </tc-form-group>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6">
+    <tc-card [title]="'Height'">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Default height'"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Height 100px'" [height]="100"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-textarea [placeholder]="'Height 6rem'" [height]="'10rem'"></tc-textarea>
+      </tc-form-group>
+    </tc-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <tc-card [title]="'Shape'">
+      <tc-form-group>
+        <tc-textarea [tcShape]="0" [placeholder]="'Square'"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Default'"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-textarea [tcShape]="30" [placeholder]="'Rounded'"></tc-textarea>
+      </tc-form-group>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6">
+    <tc-card [title]="'Resize'">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'With resize control'"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Without resize control'" [resize]="false"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-textarea [placeholder]="'Auto grow'" [autoGrow]="true"></tc-textarea>
+      </tc-form-group>
+    </tc-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <tc-card [title]="'Char limiting'">
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Placeholder'" [charLimiter]="50"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Placeholder'" [charLimiter]="{ counter: 100, before: 'Before text' }"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea [placeholder]="'Placeholder'" [charLimiter]="{ counter: 150, after: 'after text' }"></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-textarea
+          [placeholder]="'Placeholder'"
+          [charLimiter]="{ counter: 200, before: 'Before text', after: 'after text' }"
+        ></tc-textarea>
+      </tc-form-group>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6">
+    <tc-card [title]="'Custom styles'">
+      <tc-form-group>
+        <tc-textarea
+          [bgColor]="'#E57373'"
+          [borderColor]="'#E57373'"
+          [color]="'#000'"
+          [placeholder]="'Custom style'"
+          [innerValue]="'Custom style'"
+        ></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea
+          [borderColor]="'#E57373'"
+          [color]="'#E57373'"
+          [placeholder]="'Custom style'"
+          [innerValue]="'Custom style'"
+        ></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea
+          [bgColor]="['#F06292', '#E91E63']"
+          [borderColor]="['#F06292', '#E91E63']"
+          [color]="['#000', '#fff']"
+          [placeholder]="'Custom hover style'"
+          [innerValue]="'Custom hover style'"
+        ></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea
+          [borderColor]="['#F06292', '#E91E63']"
+          [color]="['#F06292', '#E91E63']"
+          [placeholder]="'Custom hover style'"
+          [innerValue]="'Custom hover style'"
+        ></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea
+          [bgColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [borderColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [color]="['#fff', '#fff', '#fff']"
+          [placeholder]="'Custom focus style'"
+          [innerValue]="'Custom focus style'"
+        ></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-textarea
+          [borderColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [color]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [placeholder]="'Custom focus style'"
+          [innerValue]="'Custom focus style'"
+        ></tc-textarea>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-textarea
+          [bgColor]="['', '', '', '#E8EAF6']"
+          [borderColor]="['', '', '', '#E8EAF6']"
+          [color]="['', '', '', '#a8a8a8']"
+          [disabled]="true"
+          [placeholder]="'Custom disabled style'"
+          [innerValue]="'Custom disabled style'"
+        ></tc-textarea>
+      </tc-form-group>
+    </tc-card>
+  </div>
+</div>
+
+<tc-card [title]="'Forms'" class="mb-0">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <form [formGroup]="reactiveForm" novalidate>
+        <tc-form-group class="mb-0">
+          <tc-form-label>Reactive form</tc-form-label>
+
+          <tc-textarea [placeholder]="'Type value'" formControlName="field"></tc-textarea>
+        </tc-form-group>
+      </form>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-0">
+        <tc-form-label>Template driven form</tc-form-label>
+
+        <tc-textarea [placeholder]="'Type value'"></tc-textarea>
+      </tc-form-group>
+    </div>
+  </div>
+</tc-card>

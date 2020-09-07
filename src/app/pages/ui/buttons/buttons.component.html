@@ -1,0 +1,113 @@
+<div class="row">
+	<div class="col-md-6">
+		<tc-card [title]="'Button sizes'">
+      <div class="buttons-list">
+        <button tc-button [size]="'sm'">Small button</button>
+        <button tc-button>Default button</button>
+        <button tc-button [size]="'lg'">Large button</button>
+      </div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6">
+		<tc-card [title]="'Button shapes'">
+      <div class="buttons-list">
+        <button tc-button>Default</button>
+        <button tc-button [tcShape]="0">Square</button>
+        <button tc-button [tcShape]="500">Rounded</button>
+      </div>
+		</tc-card>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<tc-card [title]="'Button width'">
+      <div class="buttons-list">
+        <button tc-button [style.width.%]="50">50% width button</button>
+        <button tc-button [block]="true">Block button</button>
+        <button tc-button>Default button</button>
+      </div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6">
+		<tc-card [title]="'Button align'">
+      <div class="buttons-list">
+			  <button tc-button [block]="true" [align]="'left'">Left</button>
+				<button tc-button [block]="true">Center</button>
+				<button tc-button [block]="true" [align]="'right'">Right</button>
+      </div>
+		</tc-card>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<tc-card [title]="'Button styles'">
+      <div class="buttons-list">
+        <button tc-button>Default</button>
+        <button tc-button [view]="'success'">Success</button>
+        <button tc-button [view]="'info'">Info</button>
+        <button tc-button [view]="'warning'">Warning</button>
+        <button tc-button [view]="'error'">Error</button>
+      </div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6">
+		<tc-card [title]="'Outline buttons'">
+      <div class="buttons-list">
+				<button tc-button [outline]="true" [tcLineStyle]="'dotted'" [view]="'default'">Default</button>
+				<button tc-button [outline]="true" [view]="'info'">Info</button>
+				<button tc-button [outline]="true" [tcLineStyle]="'dashed'" [view]="'warning'">Warning</button>
+				<button tc-button [outline]="true" [tcShape]="500"	[view]="'success'">Success</button>
+				<button tc-button [outline]="true" [view]="'error'">Error</button>
+      </div>
+		</tc-card>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<tc-card [title]="'Disabled buttons'" class="mb-md-0">
+      <div class="buttons-list">
+        <button tc-button [disabled]="true">Disabled</button>
+        <button tc-button [disabled]="true" [tcBgColor]="'#50408e'">Disabled</button>
+        <button tc-button [disabled]="true" [view]="'error'">Disabled</button>
+        <button tc-button [disabled]="true" [view]="'warning'" [outline]="true">Disabled</button>
+        <button tc-button [disabled]="true" [view]="'info'" [outline]="true" [tcBorderStyle]="'dotted'" [tcShape]="500">
+					Disabled
+				</button>
+      </div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6">
+		<tc-card [title]="'Icon button'" class="mb-0">
+			<div class="buttons-list">
+				<button tc-button [beforeIcon]="'icofont-bell-alt'">Before</button>
+				<button tc-button [afterIcon]="'icofont-pie-chart'" [tcBgColor]="'#4b650d'">After</button>
+				<button tc-button [afterIcon]="'icofont-pencil-alt-5'" [view]="'success'" [outline]="true"></button>
+				<button
+					tc-button
+					[afterIcon]="'icofont-coffee-pot'"
+					[tcBgColor]="['#f0f4c3', '#aab71c']"
+					[tcColor]="'#000'"
+				>
+					Add
+				</button>
+				<button
+					tc-button
+					[beforeIcon]="'icofont-social-dropbox'"
+					[view]="'info'"
+					[outline]="true"
+					[tcBorderStyle]="'dashed'"
+				>
+					Dropbox
+				</button>
+				<button tc-button [afterIcon]="'icofont-trash'" [iconAnimation]="true" [view]="'error'">Remove</button>
+			</div>
+		</tc-card>
+	</div>
+</div>

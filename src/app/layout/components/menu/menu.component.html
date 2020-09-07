@@ -1,0 +1,102 @@
+<div class="scroll-sidebar">
+  <nav class="sidebar-nav">
+    <ul id="sidebarnav">
+      <ng-container *ngFor="let item of menuItems">
+        <!-- <li *ngIf="!item.groupTitle && !item.sub" class="nav-small-cap">
+          <a class="waves-effect waves-dark" href="#" aria-expanded="false" routerLinkActive="active" [routerLink]="['/' + item.routing]">
+            <tc-icon [iconClass]="item.icon" [tcFontSize]="14"></tc-icon>
+            <span class="hide-menu">{{ item.title }}</span>
+          </a>
+        </li>*ngIf="!item.groupTitle && item.sub" -->
+        <li  routerLinkActive="active" class="nav-small-cap">
+          <a class="waves-effect waves-dark" href="#" aria-expanded="false" [ngClass]="{'has-arrow':item.sub}">
+            <tc-icon [iconClass]="item.icon" [tcFontSize]="14"></tc-icon>
+            <span class="hide-menu">{{ item.title }}</span>
+          </a>
+          <ul aria-expanded="false" class="collapse" *ngIf="item.sub">
+            <li *ngFor="let itemSub of item.sub">
+              <a [routerLink]="['/' + itemSub.routing]" routerLinkActive="active"
+                class="nav-toggler-item">{{ itemSub.title }}</a>
+            </li>
+          </ul>
+          <!--
+      <ng-container *ngIf="item.sub">
+        <a href="#" class="item-link" (click)="toggle($event, item, this)">
+          <tc-icon [iconClass]="item.icon" [tcFontSize]="14"></tc-icon>
+          <span class="link-text">{{ item.title }}</span>
+          <span class="link-caret icofont-double-right"></span>
+        </a>
+
+        <ul class="sub" [@subAppear]="subState(item.active)" *ngIf="!item.subSections">
+          <li class="menu-item" *ngFor="let itemSub of item.sub" routerLinkActive="active">
+            <a [routerLink]="['/' + itemSub.routing]"  class="item-link">
+              <span class="link-text">{{ itemSub.title }}</span>
+            </a>
+          </li>
+        </ul>
+
+        <ng-container *ngIf="item.subSections">
+          <ul class="sub sub-with-sections" [@subAppear]="subState(rla.isActive || item.active)"
+            *ngIf="item.subSections">
+            <li *ngFor="let section of item.sub" class="sub-section">
+              <ul>
+                <li class="menu-item" *ngIf="section.sectionTitle">
+                  <div class="group-title">{{ section.sectionTitle }}</div>
+                </li>
+
+                <li class="menu-item" *ngFor="let itemSub of section.subSection" routerLinkActive="active">
+                  <a [routerLink]="['/' + itemSub.routing]" class="item-link">
+                    <span class="link-text">{{ itemSub.title }}</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </ng-container>
+      </ng-container> -->
+
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+</div>
+
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<!-- <aside class="left-sidebar"> -->
+<!-- Sidebar scroll-->
+<!-- <div class="scroll-sidebar">
+    <nav class="sidebar-nav">
+      <ul id="sidebarnav">
+        <li class="nav-small-cap">MENU</li>
+        <li routerLinkActive="active">
+          <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+            <span class="hide-menu">Eventos</span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a [routerLink]="['/dashboard']" routerLinkActive="active" class="nav-toggler-item">Lista de eventos</a>
+            </li>
+            <li><a [routerLink]="['/lesson']" routerLinkActive="active" class="nav-toggler-item">Crear eventos</a></li>
+          </ul>
+        </li>
+        <li routerLinkActive="active">
+          <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+          <span class="hide-menu">Códigos QR</span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a [routerLink]="['/leerqr']" routerLinkActive="active" class="nav-toggler-item">Leer código QR</a></li>
+            <li><a [routerLink]="['/qrs']" routerLinkActive="active" class="nav-toggler-item">Lista de objetos QR</a>
+            </li>
+          </ul>
+        </li>
+        <li routerLinkActive="active"> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
+              class="mdi mdi-puzzle"></i><span class="hide-menu">Administración <span
+                class="label label-rouded label-themecolor pull-right">1</span></span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a [routerLink]="['/filtrosclases']" routerLinkActive="active" class="nav-toggler-item">Filtros de
+                clases</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div> -->
+<!-- </aside> -->

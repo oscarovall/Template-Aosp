@@ -1,0 +1,15 @@
+@import '~assets/sass/variables';
+
+:host {
+	display: flex;
+	min-height: 30 * $module-rem;
+	height: 100%;
+	overflow: auto;
+	width: 100%;
+	position: relative;
+	flex: 1;
+
+	> * {
+		flex: 1;
+	}
+}

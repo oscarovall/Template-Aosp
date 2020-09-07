@@ -1,0 +1,9 @@
+<tc-table [rows]="rows" [pagination]="true" >
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"> </tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value> <span class="nowrap"> {{ value }}</span> </ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>

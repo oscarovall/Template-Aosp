@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Badge Sizes'">
+			<div class="badges-list">
+				<tc-badge [size]="'sm'">Small badge</tc-badge>
+				<tc-badge>Default badge</tc-badge>
+				<tc-badge [size]="'lg'">Large badge</tc-badge>
+			</div>
+		</tc-card>
+	</div>
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Badge Shapes'">
+			<div class="badges-list">
+				<tc-badge [tcShape]="0">Square badge</tc-badge>
+				<tc-badge>Default badge</tc-badge>
+				<tc-badge [tcShape]="20">Round badge</tc-badge>
+			</div>
+		</tc-card>
+	</div>
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Badge Styles'" class="mb-md-0">
+			<div class="badges-list">
+				<tc-badge [view]="'accent'">Accent badge</tc-badge>
+				<tc-badge [view]="'success'">Success badge</tc-badge>
+				<tc-badge [view]="'info'">Info badge</tc-badge>
+				<tc-badge [view]="'warning'">Warning badge</tc-badge>
+				<tc-badge [view]="'error'">Error badge</tc-badge>
+			</div>
+		</tc-card>
+	</div>
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Outline Badges'" class="mb-0">
+			<div class="badges-list">
+				<tc-badge [outline]="true" [view]="'accent'">Accent badge</tc-badge>
+				<tc-badge [outline]="true" [view]="'success'">Success badge</tc-badge>
+				<tc-badge [outline]="true" [view]="'info'">Info badge</tc-badge>
+				<tc-badge [outline]="true" [view]="'warning'">Warning badge</tc-badge>
+				<tc-badge [outline]="true" [view]="'error'">Error badge</tc-badge>
+			</div>
+		</tc-card>
+	</div>
+</div>

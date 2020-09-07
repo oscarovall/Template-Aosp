@@ -1,0 +1,12 @@
+@import '~assets/sass/variables';
+:host {
+	height: 100%;
+	overflow: auto;
+	min-height: 30*$module;
+
+	agm-map {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+}

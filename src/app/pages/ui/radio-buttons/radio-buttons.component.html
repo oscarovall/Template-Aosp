@@ -1,0 +1,191 @@
+<tc-card [title]="'Basic'">
+  <tc-form-group>
+    <tc-form-label>Without label</tc-form-label>
+
+    <tc-radio [value]="'val1'">
+      <tc-radio-option [value]="'val1'"></tc-radio-option>
+      <tc-radio-option [value]="'val2'"></tc-radio-option>
+    </tc-radio>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-form-label>With label</tc-form-label>
+
+    <tc-radio [value]="'val2'">
+      <tc-radio-option [value]="'val1'">Option label</tc-radio-option>
+			<tc-radio-option [value]="'val2'">Option label</tc-radio-option>
+    </tc-radio>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-form-label>Horizontal direction</tc-form-label>
+
+    <tc-radio [direction]="'horizontal'" [value]="'val2'">
+      <tc-radio-option [value]="'val1'">Option label</tc-radio-option>
+      <tc-radio-option [value]="'val2'">Option label</tc-radio-option>
+    </tc-radio>
+  </tc-form-group>
+
+  <tc-form-group class="mb-0">
+    <tc-form-label>Disabled option</tc-form-label>
+
+    <tc-radio [direction]="'horizontal'" [value]="'val2'">
+      <tc-radio-option [value]="'val1'">Option label</tc-radio-option>
+      <tc-radio-option [value]="'val2'" [disabled]="true">Option label</tc-radio-option>
+      <tc-radio-option [value]="'val3'" [disabled]="true">Option label</tc-radio-option>
+    </tc-radio>
+  </tc-form-group>
+</tc-card>
+
+<tc-card [title]="'Custom styles'">
+  <tc-form-group>
+    <tc-form-label>Custom style</tc-form-label>
+
+    <tc-radio [direction]="'horizontal'" [value]="'val2'">
+      <tc-radio-option
+        [value]="'val1'"
+        [bgColor]="'#50bd35'"
+        [borderColor]="'#50bd35'"
+        [color]="'#fff'"
+      >
+        Option label
+      </tc-radio-option>
+      <tc-radio-option
+        [value]="'val2'"
+        [bgColor]="'#50bd35'"
+        [borderColor]="'#50bd35'"
+        [color]="'#fff'"
+      >
+        Option label
+      </tc-radio-option>
+    </tc-radio>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-form-label>Custom hover style</tc-form-label>
+
+    <tc-radio [direction]="'horizontal'" [value]="'val2'">
+      <tc-radio-option
+        [value]="'val1'"
+        [bgColor]="['transparent', '#e5bf09']"
+        [borderColor]="['#e5bf09', '#e5bf09']"
+        [color]="['#fff', '#fff']"
+      >
+        Option label
+      </tc-radio-option>
+      <tc-radio-option
+        [value]="'val2'"
+        [bgColor]="['transparent', '#e5bf09']"
+        [borderColor]="['#e5bf09', '#e5bf09']"
+        [color]="['#e5bf09', '#fff']"
+      >
+        Option label
+      </tc-radio-option>
+    </tc-radio>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-form-label>Custom checked style</tc-form-label>
+
+    <tc-radio [direction]="'horizontal'" [value]="'val1'">
+      <tc-radio-option
+        [value]="'val1'"
+        [bgColor]="['transparent', '#ec846e', '#ec2427']"
+        [borderColor]="['#ec846e', '#ec846e', '#ec2427']"
+        [color]="['#fff', '#fff', '#ffc1a6']"
+      >
+        Option label
+      </tc-radio-option>
+      <tc-radio-option
+        [value]="'val2'"
+        [bgColor]="['transparent', '#ec846e', '#ec2427']"
+        [borderColor]="['#ec846e', '#ec846e', '#ec2427']"
+        [color]="['#fff', '#fff', '#ffc1a6']"
+      >
+        Option label
+      </tc-radio-option>
+    </tc-radio>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-form-label>Custom label style</tc-form-label>
+
+    <tc-radio [direction]="'horizontal'" [value]="'val2'">
+      <tc-radio-option
+        [value]="'val1'"
+        [bgColor]="['transparent', '#c18ae5', '#863d9d']"
+        [borderColor]="['#9982ab', '#c18ae5', '#863d9d']"
+        [color]="'#fff'"
+        [labelColor]="['#9982ab', '#c18ae5', '#863d9d']"
+      >
+        Option label
+      </tc-radio-option>
+      <tc-radio-option
+        [value]="'val2'"
+        [bgColor]="['transparent', '#c18ae5', '#863d9d']"
+        [borderColor]="['#9982ab', '#c18ae5', '#863d9d']"
+        [color]="'#fff'"
+        [labelColor]="['#9982ab', '#c18ae5', '#863d9d']"
+      >
+        Option label
+      </tc-radio-option>
+    </tc-radio>
+  </tc-form-group>
+
+  <tc-form-group class="mb-0">
+    <tc-form-label>Custom disable style</tc-form-label>
+
+    <tc-radio [direction]="'horizontal'" [value]="'val2'">
+      <tc-radio-option
+        [value]="'val1'"
+        [disabled]="true"
+        [bgColor]="['transparent', '#7ccee5', '#244ae5', '#9bc5f9']"
+        [borderColor]="['#7ccee5', '#7ccee5', '#244ae5', '#9bc5f9']"
+        [color]="['#fff', '#fff', '#b6d4ff', '#cee4f9']"
+      >
+        Option label
+      </tc-radio-option>
+      <tc-radio-option
+        [value]="'val2'"
+        [disabled]="true"
+        [bgColor]="['transparent', '#7ccee5', '#244ae5', '#9bc5f9']"
+        [borderColor]="['#7ccee5', '#7ccee5', '#244ae5', '#9bc5f9']"
+        [color]="['#fff', '#fff', '#b6d4ff', '#cee4f9']"
+      >
+        Option label
+      </tc-radio-option>
+    </tc-radio>
+  </tc-form-group>
+</tc-card>
+
+<tc-card [title]="'Forms'" class="mb-0">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <form [formGroup]="reactiveForm" novalidate>
+        <tc-form-group>
+          <tc-form-label>Reactive form</tc-form-label>
+
+          <tc-radio formControlName="field">
+            <tc-radio-option [value]="'first'">First Option</tc-radio-option>
+            <tc-radio-option [value]="'second'">Second Option</tc-radio-option>
+          </tc-radio>
+        </tc-form-group>
+      </form>
+
+      <tc-input [readonly]="true" [(ngModel)]="reactiveForm.value.field"></tc-input>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Template driven form</tc-form-label>
+
+        <tc-radio ngModel #templateRadio [value]="'second'">
+          <tc-radio-option [value]="'first'">First Option</tc-radio-option>
+          <tc-radio-option [value]="'second'">Second Option</tc-radio-option>
+        </tc-radio>
+      </tc-form-group>
+
+      <tc-input [readonly]="true" [(ngModel)]="templateRadio.value"></tc-input>
+    </div>
+  </div>
+</tc-card>

@@ -1,0 +1,87 @@
+<div class="row">
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Basic alerts'">
+			<tc-alert class="mb-4">This is <strong>Default alert.</strong> Lorem ipsum dolor sit amet.</tc-alert>
+			<tc-alert [view]="'success'" class="mb-4">This is <strong>Success alert.</strong> Lorem ipsum dolor sit amet.</tc-alert>
+			<tc-alert [view]="'info'" class="mb-4">This is <strong>Info alert.</strong> Lorem ipsum dolor sit amet.</tc-alert>
+			<tc-alert [view]="'warning'" class="mb-4">This is <strong>Warnign alert.</strong> Lorem ipsum dolor sit amet.</tc-alert>
+			<tc-alert [view]="'error'">This is <strong>Error alert.</strong> Lorem ipsum dolor sit amet.</tc-alert>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Removable alerts'">
+			<tc-alert [removable]="true" class="mb-4">
+				This is <strong>Default alert.</strong> Lorem ipsum dolor sit amet.
+			</tc-alert>
+			<tc-alert [removable]="true" [view]="'success'" class="mb-4">
+				This is <strong>Success alert.</strong> Lorem ipsum dolor sit amet.
+			</tc-alert>
+			<tc-alert [removable]="true" [view]="'info'" class="mb-4">
+				This is <strong>Info alert.</strong> Lorem ipsum dolor sit amet.
+			</tc-alert>
+			<tc-alert [removable]="true" [view]="'warning'" class="mb-4">
+				This is <strong>Warnign alert.</strong> Lorem ipsum dolor sit amet.
+			</tc-alert>
+			<tc-alert [removable]="true" [view]="'error'">
+				This is <strong>Error alert.</strong> Lorem ipsum dolor sit amet.
+			</tc-alert>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Rounded Alerts'">
+			<tc-alert [tcShape]="50" [removable]="true" [view]="'success'" class="mb-4">Rounded Success alert!</tc-alert>
+			<tc-alert [tcShape]="50" [removable]="true" [view]="'info'" class="mb-4">Rounded Info alert!</tc-alert>
+			<tc-alert [tcShape]="50" [removable]="true" [view]="'error'">Rounded Error alert!</tc-alert>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'With Icon'">
+			<tc-alert [tcShape]="50" [icon]="'icofont-alarm'" [removable]="true" class="mb-4">
+				Default alert with icon.
+			</tc-alert>
+			<tc-alert [tcShape]="50" [icon]="'icofont-ui-check'" [view]="'success'" [removable]="true" class="mb-4">
+				Succes alert with icon.
+			</tc-alert>
+			<tc-alert [iconRight]="true" [icon]="'icofont-info'" [removable]="true" [view]="'info'">
+				Info alert with icon on right side.
+			</tc-alert>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Extende Content'" class="mb-md-0">
+			<tc-alert [title]="'Default alert Title'" [removable]="true" class="mb-4">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab sit error adipisci est consectetur repellendus voluptas cupiditate sapiente cum inventore.
+			</tc-alert>
+			<tc-alert [title]="'Success alert Title'" [view]="'success'" [removable]="true" class="mb-4">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab sit error adipisci est consectetur repellendus voluptas cupiditate sapiente cum inventore.
+			</tc-alert>
+			<tc-alert [title]="'Error alert Title'" [view]="'error'" [removable]="true">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab sit error adipisci est consectetur repellendus voluptas cupiditate sapiente cum inventore.
+			</tc-alert>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Outline Alerts'" class="mb-0">
+			<tc-alert [outline]="true" [removable]="true" class="mb-4">
+				Outline Default alert. Lorem ipsum dolor sit.
+			</tc-alert>
+			<tc-alert [outline]="true" [removable]="true" [view]="'success'" class="mb-4">
+				Outline succes alert. Lorem ipsum dolor sit.
+			</tc-alert>
+			<tc-alert [outline]="true" [removable]="true" [view]="'info'" class="mb-4">
+				Outline Info alert. Lorem ipsum dolor sit.
+			</tc-alert>
+			<tc-alert [outline]="true" [removable]="true" [view]="'warning'" class="mb-4">
+				Outline warning alert. Lorem ipsum dolor sit.
+			</tc-alert>
+			<tc-alert [outline]="true" [removable]="true" [view]="'error'">
+				Outline Error alert. Lorem ipsum dolor sit.
+			</tc-alert>
+		</tc-card>
+	</div>
+</div>

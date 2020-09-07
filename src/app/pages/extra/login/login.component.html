@@ -1,0 +1,29 @@
+<tc-card
+	class="mb-0"
+	[align]="'center'"
+	[padding]="0"
+	[title]="'Sign in with your app id to continue'"
+	[tcBgColor]="'rgba(255,255,255,0.2)'"
+>
+  <form class="login-form mb-0">
+    <tc-form-group>
+      <tc-input [placeholder]="'Login'"></tc-input>
+		</tc-form-group>
+
+    <tc-form-group>
+      <tc-input [type]="'password'" [placeholder]="'Password'"></tc-input>
+		</tc-form-group>
+
+		<tc-form-group>
+			<tc-checkbox [style.width]="'100%'">Keep me signed in</tc-checkbox>
+		</tc-form-group>
+
+    <button tc-button [block]="true" [tcGradient]="['#07223e', '#516478']" [routerLink]="['/']">Login</button>
+	</form>
+
+	<div class="forgot-box">
+		<a href="#" [routerLink]="['/extra/sign-up']" (click)="$event.preventDefault()">Sign Up</a>
+		<span class="divider"></span>
+		<a href="#" (click)="$event.preventDefault()">Forgot password?</a>
+	</div>
+</tc-card>

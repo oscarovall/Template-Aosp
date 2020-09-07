@@ -1,0 +1,27 @@
+@import '~assets/sass/variables';
+
+:host {
+  align-items: center;
+  background: linear-gradient(90deg, #061e38 0, #516478);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-bottom: $module-rem * 6;
+  text-align: center;
+  width: 100%;
+
+  .title {
+		color: #fff;
+    font-size: 12rem;
+    @media #{$max767} {
+      font-size: 6rem;
+    }
+  }
+  .sub-title {
+    font-size: 2rem;
+    @media #{$max767} {
+      font-size: 1.5rem;
+    }
+  }
+}

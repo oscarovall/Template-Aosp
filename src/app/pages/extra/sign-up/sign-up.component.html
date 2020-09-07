@@ -1,0 +1,32 @@
+<tc-card
+	class="mb-0"
+	[align]="'center'"
+	[padding]="0"
+	[title]="'Create your account'"
+	[tcBgColor]="'rgba(255,255,255,0.2)'"
+>
+	<form class="sign-up-form mb-0">
+		<tc-form-group>
+			<tc-input [placeholder]="'Email Adress'"></tc-input>
+		</tc-form-group>
+
+		<tc-form-group>
+			<tc-input [type]="'password'" [placeholder]="'Password'"></tc-input>
+		</tc-form-group>
+
+		<tc-form-group>
+			<tc-input [type]="'password'" [placeholder]="'Confirm Password'"></tc-input>
+		</tc-form-group>
+
+		<tc-form-group>
+			<tc-checkbox [style.width]="'100%'">I have read <a href="#" (click)="$event.preventDefault()">terms and conditions </a></tc-checkbox>
+		</tc-form-group>
+
+		<button tc-button [block]="true" [tcGradient]="['#061e38', '#0b4177']" [routerLink]="['/']">Sign up</button>
+	</form>
+
+	<div class="forgot-box">
+		<span class="mr-1">Already have an account ?</span>
+		<a href="#" [routerLink]="['/extra/log-in']" (click)="$event.preventDefault()">Sign In</a>
+	</div>
+</tc-card>

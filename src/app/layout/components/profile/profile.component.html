@@ -1,0 +1,24 @@
+<tc-card [title]="'User Profile'" [align]="'center'" [padding]="'0'">
+  <tc-contact [employeeData]="employee" [modeEdit]="modeEdit" [saveEvent]="saveEvent" [cancelEvent]="cancelEvent" (saveDone)="ShowHideModeEdit()" class="user-info"></tc-contact>
+</tc-card>
+
+<hr>
+
+<tc-card [title]="'Team Members'" [padding]="'0'" *ngIf="teamMembers.length">
+  <div class="scroll square scrollbar-dusty-grass square thin">
+    <tc-list class="mb-0">
+      <tc-list-item *ngFor="let member of teamMembers" [img]="member.imageUrl" [title]="member.name">        
+      </tc-list-item>
+    </tc-list>
+  </div>
+</tc-card>
+
+<hr>
+
+<div class="buttons">
+  <!-- <button tc-button [tcShape]="4" [outline]="true" [view]="'info'" [block]="true">CHANGE PASSWORD</button> -->
+  <button [hidden]="modeEdit" tc-button [tcShape]="4" [block]="true" (click)="ShowHideModeEdit()">EDIT PROFILE</button> 
+  <button [hidden]="!modeEdit" tc-button [tcShape]="4" [block]="true" (click)="saveClick()">SAVE</button> 
+  <button [hidden]="!modeEdit" tc-button [tcShape]="4" [outline]="true" [view]="'info'" [block]="true" (click)="cancelClick()">CANCEL</button> 
+</div>
+

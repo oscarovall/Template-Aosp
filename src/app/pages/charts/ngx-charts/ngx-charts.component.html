@@ -1,0 +1,92 @@
+<div class="row">
+	<div class="col-12 col-md-6">
+		<tc-card  [title]="'Bar Vertical Chart'">
+			<div class="chart-container">
+				<ngx-charts-bar-vertical
+	  			[scheme]="colorScheme"
+	  			[results]="single"
+	  			[gradient]="gradient"
+	  			[xAxis]="showXAxis"
+	  			[yAxis]="showYAxis"
+	  			[legend]="false"
+	  			[showXAxisLabel]="showXAxisLabel"
+	  			[showYAxisLabel]="showYAxisLabel"
+	  			[xAxisLabel]="xAxisLabel"
+					[yAxisLabel]="yAxisLabel"
+				></ngx-charts-bar-vertical>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6">
+		<tc-card  [title]="'Bar Vertical Chart'">
+			<div class="chart-container">
+				<ngx-charts-bar-horizontal
+	  			[scheme]="colorScheme"
+	  			[results]="single"
+	  			[gradient]="gradient"
+	  			[xAxis]="showXAxis"
+	  			[yAxis]="showYAxis"
+	  			[legend]="false"
+	  			[showXAxisLabel]="showXAxisLabel"
+	  			[showYAxisLabel]="showYAxisLabel"
+	  			[xAxisLabel]="xAxisLabel"
+					[yAxisLabel]="yAxisLabel"
+				></ngx-charts-bar-horizontal>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6">
+		<tc-card  [title]="'Line Chart'">
+			<div class="chart-container">
+				<ngx-charts-line-chart
+	  			[scheme]="colorScheme"
+	  			[results]="multi1"
+	  			[gradient]="gradient"
+	  			[xAxis]="showXAxis"
+	  			[yAxis]="showYAxis"
+	  			[legend]="false"
+	  			[showXAxisLabel]="showXAxisLabel"
+	  			[showYAxisLabel]="showYAxisLabel"
+	  			[xAxisLabel]="xAxisLabel"
+					[yAxisLabel]="yAxisLabel"
+				></ngx-charts-line-chart>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6">
+		<tc-card  [title]="'Pie Chart'">
+			<div class="chart-container">
+				<ngx-charts-pie-chart
+					[scheme]="colorScheme"
+					[results]="single1"
+					[gradient]="false"
+					[legend]="true"
+					[explodeSlices]="true"
+					[labels]="true"
+					[doughnut]="false">
+				</ngx-charts-pie-chart>
+			</div>
+		</tc-card>
+	</div>
+
+	<div class="col-12">
+		<tc-card  [title]="'Area Chart'" class="mb-0">
+			<div class="chart-container">
+				<ngx-charts-area-chart
+					[scheme]="colorScheme"
+					[results]="multi1"
+					[gradient]="false"
+					[xAxis]="true"
+					[yAxis]="true"
+					[legend]="false"
+					[showXAxisLabel]="false"
+					[showYAxisLabel]="false"
+					[autoScale]="true">
+				</ngx-charts-area-chart>
+			</div>
+		</tc-card>
+	</div>
+</div>

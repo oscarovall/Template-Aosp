@@ -1,0 +1,81 @@
+<form #f="ngForm" id="addTaskForm" [ngClass]="{'was-validated': wasValidated}" novalidate>
+
+  <div class="col-12 text-left item"><span>Title:</span></div>
+  <div class="col-12 text-right item">
+    <input type="text" [(ngModel)]="addTask.title" name="title" class="form-control" autocomplete="off" required>
+    <div class="invalid-feedback">It's required!</div>
+  </div>
+  
+  <div class="col-12 text-left item"><span>Date:</span></div>
+  <div class="row">
+    <div class="col-5 text-right item">
+      <date-picker [required]="true" (change)="setDate($event)"></date-picker>
+      <div class="invalid-feedback">It's required!</div>
+    </div>
+    <div class="col-7 text-right item">
+      <timepicker [(ngModel)]="startTime" name="timepicker" class="animated fadeIn" [showSpinners]="false" [required]="true"></timepicker>
+      <div class="invalid-feedback">It's required!</div>
+    </div>
+  </div>
+         
+  <div class="col-12 text-left item"><span>Priority:</span></div>
+  <div class="col-12 text-right item">
+    <tc-radio [value]="addTask.priority" (change)="setPriority($event)">
+      <div class="row w-100 mr-0 justify-content-between">
+        <tc-radio-option [value]="false" class="col mr-0">Normal</tc-radio-option>
+        <tc-radio-option [value]="true" class="col mr-0">High</tc-radio-option>
+      </div>
+    </tc-radio>    
+  </div>
+    
+  <div class="col-12 text-left item"><span>Desciption:</span></div>
+  <div class="col-12 text-right item">
+    <textarea class="w-100 form-control" [(ngModel)]="addTask.description" name="description" required></textarea>
+    <div class="invalid-feedback">It's required!</div>
+  </div>
+
+  <div class="col-12 text-left item"><span>Tag:</span></div>
+  <div class="col-12 text-right item">
+    <tc-radio [value]="addTask.due">
+      <div class="row w-100 mr-0 justify-content-between">                
+        <tc-radio-option
+          class="col-12 mr-0"
+          [value]="'val1'"
+          [bgColor]="['#f3655a', '#f3655a', '#f3655a']"
+          [color]="['#fff', '#fff', '#fff']"
+        >
+        Closing Calendar
+        </tc-radio-option>
+        <tc-radio-option
+          class="col-12 mr-0"
+          [value]="'val2'"
+          [bgColor]="['#8867e3', '#8867e3', '#8867e3']"          
+          [color]="['#fff', '#fff', '#fff']"
+        >
+        Lead Gen
+        </tc-radio-option>
+        <tc-radio-option
+          class="col-12 mr-0"
+          [value]="'val3'"
+          [bgColor]="['#00c895', '#00c895', '#00c895']"
+          [color]="['#fff', '#fff', '#fff']"
+        >
+        Factory Orders
+        </tc-radio-option>
+        <tc-radio-option
+          class="col-12 mr-0"
+          [value]="'val4'"
+          [bgColor]="['#d7a319', '#d7a319', '#d7a319']"
+          [color]="['#fff', '#fff', '#fff']"
+        >
+        Delivery Calendar
+        </tc-radio-option>
+      </div>
+    </tc-radio>
+  </div>
+ 
+  <div class="buttons">
+    <button tc-button [tcShape]="4" [block]="true" (click)="saveTask()">SAVE</button> 
+  </div>
+
+</form>

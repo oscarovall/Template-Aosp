@@ -1,0 +1,63 @@
+@import '~assets/sass/variables';
+
+// badge types
+$_shape: $shape;
+$_types: (
+  default: (
+    bg: main-palette(500),
+    color: main-contrast(500)
+  ),
+  accent: (
+    bg: accent-palette(500),
+    color: accent-contrast(500)
+  ),
+  success: (
+    bg: $success-color,
+    color: $success-contrast
+  ),
+  info: (
+    bg: $info-color,
+    color: $info-contrast
+  ),
+  warning: (
+    bg: $warning-color,
+    color: $warning-contrast
+  ),
+  error: (
+    bg: $error-color,
+    color: $error-contrast
+  ),
+  disabled: (
+    bg: #cccccc,
+    color: #fff
+  )
+);
+:host {
+  display: inline-block;
+  background: accent-palette(400);
+	border-radius: $_shape;
+	font-size: .7rem;
+  color: #fff;
+	padding: ($module-rem / 2) ($module-rem * 2);
+
+  &.small {
+    padding: ($module-rem / 3) ($module-rem);
+    font-size: .6rem;
+  }
+  &.large {
+    padding: $module-rem ($module-rem * 3);
+    font-size: .8rem;
+  }
+  @each $_type, $_color in $_types {
+    &.#{$_type} {
+      background: map-get($_color, bg);
+      color: map-get($_color, color);
+
+      &.badge-outline {
+        background: transparent !important;
+        border: 1px solid map-get($_color, bg);
+        color: map-get($_color, bg);
+      }
+    }
+  }
+}

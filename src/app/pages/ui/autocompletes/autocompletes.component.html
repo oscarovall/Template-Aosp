@@ -1,0 +1,104 @@
+<div class="row">
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Basic'">
+      <tc-autocomplete [data]="data" [key]="'country'" [placeholder]="'Type country\'s name'"></tc-autocomplete>
+		</tc-card>
+	</div>
+
+  <div class="col-12 col-md-6">
+    <tc-card [title]="'Rounded'">
+      <tc-autocomplete
+				[data]="data"
+				[key]="'country'"
+				[placeholder]="'Type country\'s name'"
+				[tcShape]="20"
+			></tc-autocomplete>
+    </tc-card>
+  </div>
+
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Custom input style'">
+      <tc-autocomplete
+        [bgColor]="['#020e1b', '#093663', '#fff']"
+        [borderColor]="['#020e1b', '#093663', '#020e1b']"
+        [color]="['#fff', '#fff', '#000']"
+        [innerValue]="'United States'"
+        [placeholder]="'Type country\'s name'"
+        [data]="data"
+        [key]="'country'"
+      ></tc-autocomplete>
+		</tc-card>
+	</div>
+
+  <div class="col-12 col-md-6">
+    <tc-card [title]="'Custom list color'">
+      <tc-autocomplete
+				[listColor]="'#90aebd'"
+				[placeholder]="'Type country\'s name'"
+				[data]="data"
+				[key]="'country'"
+			></tc-autocomplete>
+    </tc-card>
+  </div>
+
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Custom list accent color'">
+      <tc-autocomplete
+				[listAccentColor]="'#bd6e95'"
+				[placeholder]="'Type country\'s name'"
+				[data]="data"
+				[key]="'country'"
+			></tc-autocomplete>
+		</tc-card>
+	</div>
+
+	<div class="col-12 col-md-6">
+		<tc-card [title]="'Custom list background color'">
+      <tc-autocomplete
+				[listBg]="'#fff'"
+				[listColor]="'#093663'"
+				[placeholder]="'Type country\'s name'"
+				[data]="data"
+				[key]="'country'"
+			></tc-autocomplete>
+		</tc-card>
+	</div>
+</div>
+
+<tc-card [title]="'Forms'" class="mb-0">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <form [formGroup]="reactiveForm" novalidate>
+        <tc-form-group>
+          <tc-form-label>Reactive form</tc-form-label>
+
+          <tc-autocomplete
+            [data]="data"
+            [key]="'country'"
+            [placeholder]="'Type country\'s name'"
+            formControlName="field"
+          ></tc-autocomplete>
+        </tc-form-group>
+      </form>
+
+      <tc-input [readonly]="true" [(ngModel)]="reactiveForm.value.field"></tc-input>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Template driven form</tc-form-label>
+
+        <tc-autocomplete
+          [data]="data"
+          [key]="'country'"
+          [placeholder]="'Type country\'s name'"
+          #autocomp
+        ></tc-autocomplete>
+      </tc-form-group>
+
+      <tc-input [readonly]="true" [(ngModel)]="autocomp.value"></tc-input>
+    </div>
+  </div>
+</tc-card>
+
+

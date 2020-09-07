@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-12" *ngFor="let documentItem of documents">
+    <div class="line">
+      <a *ngIf="!type" [href]="documentItem.link" target="_blank">
+        <tc-checkbox [value]="documentItem.uploaded" [disabled]="true" >{{documentItem.name}}
+        </tc-checkbox>
+      </a>
+      <a *ngIf="type" [href]="documentItem.link" target="_blank">
+        <tc-checkbox [value]="documentItem.uploaded" [disabled]="true" >{{documentItem.name}}
+        </tc-checkbox>
+      </a>
+      <div *ngIf="!disabled">
+        <div class="icon tc-icon-wrap aosp-ui-upload" (click)="uploadDocument(documentItem.name, {docName: documentItem.name, AttributeID: documentItem.attributeId})"></div>
+      </div>
+    </div>
+
+    <hr>
+  </div>
+</div>

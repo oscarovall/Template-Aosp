@@ -1,0 +1,41 @@
+<div class="row">
+	<div class="col-md-6">
+		<tc-card [title]="'Basic accordion'">
+			<tc-accordion>
+				<tc-panel *ngFor="let panel of panels; let l = last" [title]="panel.title" [ngClass]="{ 'mb-0': l }">
+					{{ panel.desc }}
+				</tc-panel>
+			</tc-accordion>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6">
+		<tc-card [title]="'Alternate Style'" >
+			<tc-accordion [view]="'alternative'">
+				<tc-panel *ngFor="let panel of panels; let l = last" [title]="panel.title" [ngClass]="{ 'mb-0': l }">
+          {{ panel.desc }}
+        </tc-panel>
+			</tc-accordion>
+		</tc-card>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<tc-card [title]="'Panels sizes'" class="mb-0">
+			<tc-accordion>
+				<tc-panel [title]="'Small panel'" [size]="'sm'">
+					Sed tempor neque arcu, at lacinia odio feugiat at. Aenean ornare interdum augue ac sagittis. Curabitur eu tellus a leo eleifend commodo. Praesent tincidunt aliquam rhoncus. Curabitur quis lorem consequat, fermentum quam a, tristique massa. In vitae vehicula neque. Nullam ut faucibus erat. Mauris non pretium justo. Donec id arcu ipsum. Curabitur fermentum porta mi, a elementum velit fringilla sed.
+				</tc-panel>
+
+				<tc-panel [title]="'Default panel'">
+					Sed tempor neque arcu, at lacinia odio feugiat at. Aenean ornare interdum augue ac sagittis. Curabitur eu tellus a leo eleifend commodo. Praesent tincidunt aliquam rhoncus. Curabitur quis lorem consequat, fermentum quam a, tristique massa. In vitae vehicula neque. Nullam ut faucibus erat. Mauris non pretium justo. Donec id arcu ipsum. Curabitur fermentum porta mi, a elementum velit fringilla sed.
+				</tc-panel>
+
+				<tc-panel [title]="'Large panel'" [size]="'lg'" class="mb-0">
+					Sed tempor neque arcu, at lacinia odio feugiat at. Aenean ornare interdum augue ac sagittis. Curabitur eu tellus a leo eleifend commodo. Praesent tincidunt aliquam rhoncus. Curabitur quis lorem consequat, fermentum quam a, tristique massa. In vitae vehicula neque. Nullam ut faucibus erat. Mauris non pretium justo. Donec id arcu ipsum. Curabitur fermentum porta mi, a elementum velit fringilla sed.
+				</tc-panel>
+			</tc-accordion>
+		</tc-card>
+	</div>
+</div>

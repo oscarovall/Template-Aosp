@@ -1,0 +1,11 @@
+@import "~assets/sass/styles";
+
+:host {
+	
+	.title-box {
+		text-align: center;
+	}
+	.section-title {
+		margin-top: $module-rem * 3;
+	}
+}

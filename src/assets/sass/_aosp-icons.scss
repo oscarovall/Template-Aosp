@@ -1,0 +1,179 @@
+
+.tc-icon-wrap {
+  line-height: 1;
+  width: 17px;
+  height: 20px;
+}
+
+// Main menu icons
+
+.aosp-ui-home {
+  background: url("/assets/img/AOSP/homeMenu.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-customer {
+  background: url("/assets/img/AOSP/customerMenu.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-inventory {
+  background: url("/assets/img/AOSP/inventoryMenu.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-serviceandrepair
+{
+  background: url("/assets/img/AOSP/serviceAndRepairMenu.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-insurance
+{
+  background: url("/assets/img/AOSP/insuranceMenu.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-finance
+{
+  background: url("/assets/img/AOSP/financeMenu.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-realestate
+{
+  background: url("/assets/img/AOSP/realEstateMenu.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-reports
+{
+  background: url("/assets/img/AOSP/reportsMenu.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-administration
+{
+  background: url("/assets/img/AOSP/adminMenu.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-upload
+{
+  background: url("/assets/img/AOSP/upload_icon.svg");
+  background-size: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aosp-ui-icon {
+  background-size: 17px;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+}
+
+// Workflow Menu
+
+.aosp-ui-menu0 {
+  background-image: url("/assets/img/AOSP/menu_icon0.svg");
+}
+
+.aosp-ui-menu1 {
+  background-image: url("/assets/img/AOSP/menu_icon1.svg");
+}
+
+.aosp-ui-menu2 {
+  background-image: url("/assets/img/AOSP/menu_icon2.svg");
+}
+
+.aosp-ui-menu3 {
+  background-image: url("/assets/img/AOSP/menu_icon3.svg");
+}
+
+.aosp-ui-menu4 {
+  background-image: url("/assets/img/AOSP/menu_icon4.svg");
+}
+
+.aosp-ui-menu5 {
+  background-image: url("/assets/img/AOSP/menu_icon5.svg");
+}
+
+.aosp-ui-menu6 {
+  background-image: url("/assets/img/AOSP/menu_icon6.svg");
+}
+
+.aosp-ui-menu7 {
+  background-image: url("/assets/img/AOSP/menu_icon7.svg");
+}
+
+.aosp-ui-menu8 {
+  background-image: url("/assets/img/AOSP/menu_icon8.svg");
+}
+
+.aosp-ui-menu9 {
+  background-image: url("/assets/img/AOSP/menu_icon9.svg");
+}
+
+// Header Icons
+.aosp-ui-icon-header {
+  background-size: 24px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.aosp-ui-calendar {
+  background-image: url("/assets/img/AOSP/date_icon.svg");
+}
+
+.aosp-ui-notification {
+  background-image: url("/assets/img/AOSP/notification_icon.svg");
+}
+
+.aosp-ui-new-lead {
+  background-image: url("/assets/img/AOSP/add_lead_icon.svg");
+}
+
+//Mobile Menu
+.aosp-ui-bars-menu {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background-image: url("/assets/img/AOSP/close_menu.svg");
+  transition: 0.3s;
+}
+
+.aosp-ui-close-menu {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background-image: url("/assets/img/AOSP/open_menu.svg");
+  transition: 0.3s;
+}
+
+

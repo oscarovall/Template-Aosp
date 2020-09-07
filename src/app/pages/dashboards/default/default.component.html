@@ -1,0 +1,202 @@
+<div class="p-3">
+  <div class="row">
+    <div class="col-12 col-md-6 col-xl-3">
+      <tc-card [tcGradient]="['#061e38', '#193048']">
+        <div class="row no-gutters align-items-center">
+          <div class="col">
+            <tc-icon [iconClass]="'icofont-people'" [tcFontSize]="'2.8rem'" [padding]="0"></tc-icon>
+          </div>
+
+          <div class="col-auto text-right">
+            <div [tcFontSize]="'1.5rem'">12,254</div>
+            <div class="nowrap">Visitors/day</div>
+          </div>
+        </div>
+      </tc-card>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+      <tc-card [tcGradient]="['#193048', '#2b4158']">
+        <div class="row no-gutters align-items-center">
+          <div class="col">
+            <tc-icon [iconClass]="'icofont-layers'" [tcFontSize]="'2.8rem'" [padding]="0"></tc-icon>
+          </div>
+
+          <div class="col-auto text-right">
+            <div [tcFontSize]="'1.5rem'">25,658</div>
+            <div class="nowrap">Page views</div>
+          </div>
+        </div>
+      </tc-card>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+      <tc-card [tcGradient]="['#2b4158', '#3d5167']">
+        <div class="row no-gutters align-items-center">
+          <div class="col">
+            <tc-icon [iconClass]="'icofont-diamond'" [tcFontSize]="'2.8rem'" [padding]="0"></tc-icon>
+          </div>
+
+          <div class="col-auto text-right">
+            <div [tcFontSize]="'1.5rem'">$5 687</div>
+            <div class="nowrap">Revenue/day</div>
+          </div>
+        </div>
+      </tc-card>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+      <tc-card [tcGradient]="['#3d5167', '#4e6276']">
+        <div class="row no-gutters align-items-center">
+          <div class="col">
+            <tc-icon [iconClass]="'icofont-exclamation-square'" [tcFontSize]="'2.8rem'" [padding]="0"></tc-icon>
+          </div>
+
+          <div class="col-auto text-right">
+            <div [tcFontSize]="'1.5rem'">5,86%</div>
+            <div class="nowrap">Bounce rate</div>
+          </div>
+        </div>
+      </tc-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <tc-card [title]="'Audience Overview'">
+        <canvas baseChart [datasets]="chartData2" [labels]="lineChartLabels" [options]="lineChartOptions"
+          [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
+      </tc-card>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-card [title]="'Development'">
+        <canvas baseChart [datasets]="chartData1" [labels]="barChartLabels" [options]="barChartOptions"
+          [colors]="barChartColors" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+      </tc-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <tc-card [title]="'Best Selling'">
+        <div class="chat-container">
+          <ngx-charts-pie-chart [scheme]="colorScheme" [results]="chartData3" [doughnut]="true" [arcWidth]="0.08"
+            [legend]="false"></ngx-charts-pie-chart>
+        </div>
+
+        <div>
+          <p class="nowrap">
+            <tc-icon [iconClass]="'icofont-chart-pie-alt'" [tcColor]="'#e24d4d'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'" class="ml-3">Women bags</span>
+          </p>
+
+          <p class="nowrap">
+            <tc-icon [iconClass]="'icofont-chart-pie-alt'" [tcColor]="'#FF8534'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'" class="ml-3">Women shoes</span>
+          </p>
+
+          <p class="nowrap mb-0">
+            <tc-icon [iconClass]="'icofont-chart-pie-alt'" [tcColor]="'#50BD35'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'" class="ml-3">Accessories</span>
+          </p>
+        </div>
+      </tc-card>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <tc-card [title]="'Todo List'">
+        <tc-todo [data]="todoData"></tc-todo>
+      </tc-card>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <tc-card [title]="'User info'" [padding]="0">
+       <!--  <tc-contact [user]="userData" class="user-info"></tc-contact> -->
+      </tc-card>
+    </div>
+  </div>
+
+  <tc-table [bordered]="true" [hovered]="true" [rows]="products">
+    <tc-column [columnTitle]="'Recent orders'" [columnName]="'product'"></tc-column>
+
+    <tc-column [columnTitle]="'Photo'" [columnName]="'photo'">
+      <ng-template #tableBodyTemplate let-row="row">
+        <div class="text-center">
+          <img src="{{ row['img'] }}" width="50" height="50" alt="{{ row['product'] }}">
+        </div>
+      </ng-template>
+    </tc-column>
+
+    <tc-column [columnTitle]="'Product ID'" [columnName]="'id'"></tc-column>
+
+    <tc-column [columnTitle]="'Status'" [columnName]="'status'">
+      <ng-template #tableBodyTemplate let-row="row">
+        <tc-badge [size]="'sm'" [view]="row['status-view']"><span class="nowrap">{{ row['status'] }}</span></tc-badge>
+      </ng-template>
+    </tc-column>
+
+    <tc-column [columnTitle]="'Amount'" [columnName]="'amount'"></tc-column>
+
+    <tc-column [columnTitle]="'Date'" [columnName]="'date'"></tc-column>
+
+    <tc-column [columnTitle]="'Shipping'">
+      <ng-template #tableBodyTemplate let-row="row">
+        <tc-progress [color]="row['progress-color']" [progress]="row['progress']" [size]="'sm'" class="mb-0">
+        </tc-progress>
+      </ng-template>
+    </tc-column>
+  </tc-table>
+
+  <tc-card [tcBgColor]="'rgba(255,255,255,0.1)'" class="mb-0 mt-4">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 col-xl-3 mb-4 mb-xl-0">
+        <div class="d-flex align-items-center">
+          <tc-icon [iconClass]="'icofont-facebook'" [tcFontSize]="'1.2rem'" [tcBgColor]="'#3b579d'" [tcShape]="'50%'"
+            [padding]="'1rem'"></tc-icon>
+
+          <div class="ml-4">
+            <h3 class="h6 mt-0 mb-0">Facebook</h3>
+            <div class="nowrap">2345 friends</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-3 mb-4 mb-xl-0">
+        <div class="d-flex align-items-center">
+          <tc-icon [iconClass]="'icofont-twitter'" [tcFontSize]="'1.2rem'" [tcBgColor]="'#2caae1'" [tcShape]="'50%'"
+            [padding]="'1rem'"></tc-icon>
+
+          <div class="ml-4">
+            <h3 class="h6 mt-0 mb-0">Twitter</h3>
+            <div class="nowrap">8564 followers</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-3 mb-4 mb-md-0">
+        <div class="d-flex align-items-center">
+          <tc-icon [iconClass]="'icofont-google-plus'" [tcFontSize]="'1.2rem'" [tcBgColor]="'#dc4a38'" [tcShape]="'50%'"
+            [padding]="'1rem'"></tc-icon>
+
+          <div class="ml-4">
+            <h3 class="h6 mt-0 mb-0">Google plus</h3>
+            <div class="nowrap">995 friends</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-3">
+        <div class="d-flex align-items-center">
+          <tc-icon [iconClass]="'icofont-livejournal'" [tcFontSize]="'1.2rem'" [tcBgColor]="'#004359'" [tcShape]="'50%'"
+            [padding]="'1rem'"></tc-icon>
+
+          <div class="ml-4">
+            <h3 class="h6 mt-0 mb-0">Live journal</h3>
+            <div class="nowrap">4432 friends</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </tc-card>
+</div>

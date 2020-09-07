@@ -1,0 +1,50 @@
+@import '~assets/sass/variables';
+
+.scrollbar-dusty-grass::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+	background-color: #38496e;
+	border-radius: 10px;
+}
+
+.scrollbar-dusty-grass::-webkit-scrollbar {
+	width: 7px;
+	background-color: #38496e;
+}
+
+.scrollbar-dusty-grass::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+	background-image: -webkit-linear-gradient(330deg, #64b5f6 0%, #64b5f6 100%);
+	background-image: linear-gradient(120deg, #64b5f6 0%, #64b5f6 100%);
+}
+
+.square::-webkit-scrollbar-track {
+	border-radius: 0 !important;
+}
+
+.square::-webkit-scrollbar-thumb {
+	border-radius: 0 !important;
+}
+
+.thin::-webkit-scrollbar {
+	width: 6px;
+}
+
+.scroll {
+	position: relative;
+	overflow-y: scroll;
+	height: 190px;
+}
+
+.buttons {
+	padding: 20px 75px 20px 75px;
+}
+
+tc-card {
+	background-color: #001347;
+}
+
+hr {
+    width: 85%;
+    background-color: #00529b;
+}

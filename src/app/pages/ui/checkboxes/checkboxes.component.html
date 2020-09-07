@@ -1,0 +1,92 @@
+<tc-card [title]="'Basic'">
+  <tc-form-group>
+    <tc-checkbox></tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox>Checkbox label</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox [value]="true">Checked</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox [disabled]="true">Disabled</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group class="mb-0">
+    <tc-checkbox [value]="true" [disabled]="true">Checked disabled</tc-checkbox>
+  </tc-form-group>
+</tc-card>
+
+<tc-card [title]="'Custom styles'">
+  <tc-form-group>
+    <tc-checkbox
+      [bgColor]="'#50bd35'"
+      [borderColor]="'#50bd35'"
+      [color]="'#fff'"
+    >Custom style</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox
+      [bgColor]="['transparent', '#e5bf09']"
+      [borderColor]="['#e5bf09', '#e5bf09']"
+      [color]="['#fff', '#fff']"
+    >Custom hover style</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox
+      [bgColor]="['transparent', '#ec846e', '#ec2427']"
+      [borderColor]="['#ec846e', '#ec846e', '#ec2427']"
+      [color]="['#fff', '#fff', '#ffc1a6']"
+    >Custom checked style</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-checkbox
+      [bgColor]="['transparent', '#c18ae5', '#863d9d']"
+      [borderColor]="['#9982ab', '#c18ae5', '#863d9d']"
+      [color]="'#fff'"
+      [labelColor]="['#9982ab', '#c18ae5', '#863d9d']"
+    >Custom label style</tc-checkbox>
+  </tc-form-group>
+
+  <tc-form-group class="mb-0">
+    <tc-checkbox
+      [value]="true"
+      [disabled]="true"
+      [bgColor]="['transparent', '#7ccee5', '#244ae5', '#9bc5f9']"
+      [borderColor]="['#7ccee5', '#7ccee5', '#244ae5', '#9bc5f9']"
+      [color]="['#fff', '#fff', '#b6d4ff', '#cee4f9']"
+    >Custom disable style</tc-checkbox>
+  </tc-form-group>
+</tc-card>
+
+<tc-card [title]="'Forms'" class="mb-0">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <form [formGroup]="reactiveForm" novalidate>
+        <tc-form-group>
+          <tc-form-label>Reactive form</tc-form-label>
+
+          <tc-checkbox formControlName="checkboxField"></tc-checkbox>
+        </tc-form-group>
+      </form>
+
+      <tc-input [readonly]="true" [(ngModel)]="reactiveForm.value.checkboxField"></tc-input>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Template driven form</tc-form-label>
+
+        <tc-checkbox #checkbox1></tc-checkbox>
+      </tc-form-group>
+
+      <tc-input [readonly]="true" [(ngModel)]="checkbox1.value"></tc-input>
+    </div>
+  </div>
+</tc-card>

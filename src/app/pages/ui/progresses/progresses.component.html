@@ -1,0 +1,39 @@
+<tc-card [title]="'Basic progress bar'">
+  <tc-progress [color]="'#ffb74d'" [progress]="35"></tc-progress>
+  <tc-progress [color]="'#81c784'" [progress]="50"></tc-progress>
+  <tc-progress [color]="'#64b5f6'" [progress]="65"></tc-progress>
+  <tc-progress [color]="'#e24d4d'" [progress]="75" class="mb-0"></tc-progress>
+</tc-card>
+
+<tc-card [title]="'Diferent sizes'">
+  <h5>Extra Small</h5>
+  <tc-progress [color]="'#ffb74d'" [progress]="35" [size]="'ex-sm'"></tc-progress>
+  <tc-progress [color]="'#81c784'" [progress]="50" [size]="'ex-sm'"></tc-progress>
+  <tc-progress [color]="'#64b5f6'" [progress]="65" [size]="'ex-sm'"></tc-progress>
+  <tc-progress [color]="'#e24d4d'" [progress]="80" [size]="'ex-sm'"></tc-progress>
+
+  <h5>Small</h5>
+  <tc-progress [color]="'#ffb74d'" [progress]="35" [size]="'sm'"></tc-progress>
+  <tc-progress [color]="'#81c784'" [progress]="50" [size]="'sm'"></tc-progress>
+  <tc-progress [color]="'#64b5f6'" [progress]="65" [size]="'sm'"></tc-progress>
+  <tc-progress [color]="'#e24d4d'" [progress]="80" [size]="'sm'"></tc-progress>
+
+  <h5>Default</h5>
+  <tc-progress [color]="'#ffb74d'" [progress]="35"></tc-progress>
+  <tc-progress [color]="'#81c784'" [progress]="50"></tc-progress>
+  <tc-progress [color]="'#64b5f6'" [progress]="65"></tc-progress>
+  <tc-progress [color]="'#e24d4d'" [progress]="80"></tc-progress>
+
+  <h5>Large</h5>
+  <tc-progress [color]="'#ffb74d'" [progress]="35" [size]="'lg'"></tc-progress>
+  <tc-progress [color]="'#81c784'" [progress]="50" [size]="'lg'"></tc-progress>
+  <tc-progress [color]="'#64b5f6'" [progress]="65" [size]="'lg'"></tc-progress>
+  <tc-progress [color]="'#e24d4d'" [progress]="80" [size]="'lg'" class="mb-0"></tc-progress>
+</tc-card>
+
+<tc-card [title]="'With Label'" class="mb-0">
+  <tc-progress [label]="true" [color]="'#ffb74d'" [progress]="35"></tc-progress>
+  <tc-progress [label]="true" [color]="'#81c784'" [progress]="50"></tc-progress>
+  <tc-progress [label]="true" [color]="'#64b5f6'" [progress]="65"></tc-progress>
+  <tc-progress [label]="true" [color]="'#e24d4d'" [progress]="80" class="mb-0"></tc-progress>
+</tc-card>

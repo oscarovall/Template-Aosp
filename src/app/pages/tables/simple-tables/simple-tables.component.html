@@ -1,0 +1,120 @@
+<h5>Simple table</h5>
+
+<tc-table [rows]="rows" [config]="config" class="mb-4">
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"></tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value><span class="nowrap"> {{ value }}</span></ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>
+
+<h5>Header color variations</h5>
+
+<tc-table [rows]="rows2" [config]="config" [headerBgColor]="'#81c784'" class="mb-4">
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"></tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value><span class="nowrap"> {{ value }}</span></ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>
+
+<tc-table [rows]="rows2" [config]="config" [headerBgColor]="'#64b5f6'" class="mb-4">
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"></tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value><span class="nowrap"> {{ value }}</span></ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>
+
+<tc-table [rows]="rows2" [headerBgColor]="'#e24d4d'" class="mb-4">
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"></tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value><span class="nowrap"> {{ value }}</span></ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>
+
+<h5>Full color variations</h5>
+
+<tc-table
+	[rows]="rows2"
+	[config]="config"
+	[headerBgColor]="'#81c784'"
+	[contentBgColor]="'rgba(129,199,132,0.5)'"
+	[headerColor]="'#fff'"
+	class="mb-4"
+>
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"></tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value><span class="nowrap"> {{ value }}</span></ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>
+
+<tc-table
+	[rows]="rows2"
+	[config]="config"
+	[headerBgColor]="'#e24d4d'"
+	[contentBgColor]="'rgba(226,77,77,0.5)'"
+	[headerColor]="'#fff'"
+	class="mb-4"
+>
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"></tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value><span class="nowrap"> {{ value }}</span></ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>
+
+<tc-table
+	[rows]="rows2"
+	[config]="config"
+	[headerBgColor]="'#64b5f6'"
+	[contentBgColor]="'rgba(100,181,246,0.5)'"
+	[headerColor]="'#fff'"
+	class="mb-4"
+>
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"></tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value><span class="nowrap"> {{ value }}</span></ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>
+
+<h5>Hovered and bordered table</h5>
+
+<tc-table [rows]="rows" [config]="config" [hovered]="true" [bordered]="true" class="mb-4">
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"></tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value><span class="nowrap"> {{ value }}</span></ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>
+
+<h5>Striped rows</h5>
+
+<tc-table [rows]="rows" [config]="config" [striped]="true">
+	<tc-column [columnTitle]="'#'" [columnName]="'number'"></tc-column>
+	<tc-column [columnTitle]="'Person'" [columnName]="'person'"></tc-column>
+	<tc-column [columnTitle]="'Position'" [columnName]="'position'"></tc-column>
+	<tc-column [columnTitle]="'Phone'" [columnName]="'phone'"[enableSorting]="true">
+		<ng-template #tableBodyTemplate let-value><span class="nowrap"> {{ value }}</span></ng-template>
+	</tc-column>
+	<tc-column [columnTitle]="'E-mail'" [columnName]="'email'"></tc-column>
+</tc-table>

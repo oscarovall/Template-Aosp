@@ -1,0 +1,272 @@
+<div class="row">
+	<div class="col-md-6 col-sm-12">
+		<tc-card>
+      <div class="row align-items-center">
+        <div class="col">
+          <h3 class="h6 mt-0 mb-0">Page Views</h3>
+          <div [tcColor]="'#a1a7aa'" class="nowrap">24,387</div>
+        </div>
+
+        <div class="col-auto">
+          <button tc-button>View More</button>
+        </div>
+      </div>
+
+      <div class="chat-container">
+        <ngx-charts-line-chart
+          [scheme]="colorScheme"
+          [results]="linearData"
+          [gradient]="false"
+          [xAxis]="false"
+          [yAxis]="false"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false"
+          [curve]="curve"
+        ></ngx-charts-line-chart>
+      </div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-sm-12">
+    <tc-card>
+      <div class="row align-items-center">
+        <div class="col">
+          <h3 class="h6 mt-0 mb-0">Sales Stat</h3>
+          <div [tcColor]="'#a1a7aa'" class="nowrap">1,483 $</div>
+        </div>
+
+        <div class="col-auto">
+          <button tc-button>View More</button>
+        </div>
+      </div>
+
+      <div class="chat-container">
+        <ngx-charts-bar-vertical
+          [scheme]="colorScheme"
+          [barPadding]="30"
+          [results]="data1"
+          [gradient]="false"
+          [roundEdges]="false"
+          [xAxis]="false"
+          [yAxis]="false"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false"
+        ></ngx-charts-bar-vertical>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col-md-4 col-sm-12">
+    <tc-card>
+      <div class="row no-gutters align-items-center">
+        <div class="col-6">
+          <h3 class="h5 mt-0">Sales Stat</h3>
+          <div [tcFontSize]="'1.6rem'" [tcColor]="'#678cf9'" class="nowrap">1,483 $</div>
+        </div>
+
+        <div class="col-6">
+          <div class="chat-container container-h-100">
+            <ngx-charts-bar-vertical
+              [scheme]="mainColor"
+              [results]="data1"
+              [gradient]="false"
+              [roundEdges]="false"
+              [barPadding]="2"
+              [xAxis]="false"
+              [yAxis]="false"
+              [legend]="false"
+              [showXAxisLabel]="false"
+              [showYAxisLabel]="false"
+            ></ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col-md-4 col-sm-12">
+		<tc-card>
+      <div class="row no-gutters align-items-center">
+        <div class="col-6">
+          <h3 class="h5 mt-0">Users</h3>
+          <div [tcFontSize]="'1.6rem'" [tcColor]="'#50bd35'" class="nowrap">
+            212
+            <tc-icon [iconClass]="'icofont-long-arrow-up'" [tcFontSize]="'2.3rem'" [padding]="0"></tc-icon>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="chat-container container-h-100">
+            <ngx-charts-pie-chart
+              [scheme]="colorScheme"
+              [results]="data"
+              [gradient]="true"
+              [doughnut]="true"
+              [arcWidth]="0.2"
+              [legend]="false"
+            ></ngx-charts-pie-chart>
+          </div>
+        </div>
+      </div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-4 col-sm-12">
+		<tc-card>
+      <div class="row no-gutters align-items-center">
+        <div class="col-6">
+          <h3 class="h5 mt-0">Views</h3>
+          <div [tcFontSize]="'1.6rem'" [tcColor]="'#e24d4d'" class="nowrap">
+            7507
+            <tc-icon [iconClass]="'icofont-check-circled'" [tcFontSize]="'2.3rem'" [padding]="0"></tc-icon>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="chat-container container-h-100">
+            <ngx-charts-area-chart
+              [scheme]="mainColor"
+              [results]="linearData"
+              [gradient]="false"
+              [legend]="false"
+              [showXAxisLabel]="false"
+              [showYAxisLabel]="false"
+              [autoScale]="true"
+              [curve]="curve"
+            ></ngx-charts-area-chart>
+          </div>
+        </div>
+      </div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-sm-12">
+		<tc-card [title]="'Goals'">
+      <div class="chat-container container-h-300">
+        <ngx-charts-pie-chart
+          [scheme]="goalsColor"
+          [results]="data2"
+          [doughnut]="true"
+          [arcWidth]="0.08"
+          [legend]="false"
+        ></ngx-charts-pie-chart>
+      </div>
+
+      <div class="row align-items-center justify-content-between">
+        <div class="col-auto text-center">
+          <div [tcFontSize]="'1.5rem'">75%</div>
+          <div class="nowrap">
+            <tc-icon [iconClass]="'icofont-chart-pie-alt'" [tcColor]="'#e24d4d'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'" class="ml-3">Sales</span>
+          </div>
+        </div>
+
+        <div class="col-auto text-center">
+          <div [tcFontSize]="'1.5rem'">85%</div>
+          <div class="nowrap">
+            <tc-icon [iconClass]="'icofont-chart-pie-alt'" [tcColor]="'#FF8534'"></tc-icon>
+            <span [tcColor]="'#FF8534'" class="ml-3">Expected Sales</span>
+          </div>
+        </div>
+      </div>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-sm-12">
+    <tc-card [title]="'Statistic'">
+      <div class="chat-container container-h-300">
+        <ngx-charts-polar-chart
+          [scheme]="colorScheme"
+          [results]="linearData2"
+          [showGridLines]="true"
+          [roundDomains]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+        ></ngx-charts-polar-chart>
+      </div>
+
+      <div class="row align-items-center justify-content-center pt-4">
+        <div class="col-auto text-center">
+          <div class="nowrap">
+            <tc-icon [iconClass]="'icofont-water-drop'" [tcColor]="'#e24d4d'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'" class="ml-3">Income</span>
+          </div>
+        </div>
+
+        <div class="col-auto text-center">
+          <div class="nowrap">
+            <tc-icon [iconClass]="'icofont-water-drop'" [tcColor]="'#E22A6F'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'" class="ml-3">Expecies</span>
+          </div>
+        </div>
+
+        <div class="col-auto text-center">
+          <div class="nowrap">
+            <tc-icon [iconClass]="'icofont-water-drop'" [tcColor]="'#50BD35'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'" class="ml-3">Total</span>
+          </div>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+</div>
+
+<tc-card [title]="'Earnings'"  class="mb-0">
+  <div class="row align-items-center">
+    <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+      <div class="chat-container container-h-300">
+        <ngx-charts-line-chart
+          [scheme]="colorScheme"
+          [results]="linearData2"
+          [gradient]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false"
+        ></ngx-charts-line-chart>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="row justify-content-center">
+        <div class="col-auto text-center">
+          <div class="nowrap" [tcFontSize]="'1.2rem'">
+            <tc-icon [iconClass]="'icofont-tack-pin'" [tcColor]="'#50BD35'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'">Incomes</span>
+          </div>
+          <div [tcFontSize]="'2rem'">$5 587</div>
+        </div>
+
+        <div class="col-auto text-center">
+          <div class="nowrap" [tcFontSize]="'1.2rem'">
+            <tc-icon [iconClass]="'icofont-tack-pin'" [tcColor]="'#eb3d6c'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'">Expenses</span>
+          </div>
+          <div [tcFontSize]="'2rem'">$1 956</div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center pt-4">
+        <div class="col-auto text-center">
+          <div class="nowrap" [tcFontSize]="'1.2rem'">
+            <tc-icon [iconClass]="'icofont-tack-pin'" [tcColor]="'#f5a623'"></tc-icon>
+            <span [tcColor]="'#a1a7aa'">Total</span>
+          </div>
+          <div [tcFontSize]="'2rem'">$3 631</div>
+        </div>
+
+        <div class="col-auto text-center">
+          <div class="nowrap" [tcFontSize]="'1.2rem'">
+            <span [tcColor]="'#a1a7aa'">Available</span>
+          </div>
+          <div [tcFontSize]="'2rem'">$10 956</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</tc-card>
+

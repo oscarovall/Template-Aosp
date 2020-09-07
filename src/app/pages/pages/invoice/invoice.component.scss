@@ -1,0 +1,59 @@
+@import '~assets/sass/variables';
+
+:host {
+
+	.info-box {
+    align-items: flex-end;
+		display: flex;
+		justify-content: space-between;
+    margin: 0 (-$module-rem) ($module-rem * 2);
+    @media #{$max767} {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+		.sender {
+      margin: 0 $module-rem ($module-rem * 2);
+		}
+		.customer {
+      margin: 0 $module-rem ($module-rem * 2);
+			text-align: right;
+      @media #{$max767} {
+        text-align: left;
+      }
+
+      .invoice-number {
+        font-size: 1.6rem;
+      }
+		}
+	}
+  .orders-table {
+    margin-bottom: $module-rem * 4;
+  }
+	.total {
+    text-align: right;
+    @media #{$max767} {
+      text-align: left;
+    }
+
+		.total-cost {
+      p {
+        margin-bottom: $module-rem / 2;
+      }
+    }
+
+	}
+  .submit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0 (-$module-rem);
+    @media #{$max767} {
+      justify-content: flex-start;
+    }
+
+    .tc-btn {
+      margin: $module-rem $module-rem 0;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+<tc-card [title]="'Basic'">
+  <tc-form-group>
+    <tc-switcher></tc-switcher>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-switcher>Switcher label</tc-switcher>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-switcher [value]="true">Checked</tc-switcher>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-switcher [disabled]="true">Disabled</tc-switcher>
+  </tc-form-group>
+
+  <tc-form-group class="mb-0">
+    <tc-switcher [value]="true" [disabled]="true">Checked disabled</tc-switcher>
+  </tc-form-group>
+</tc-card>
+
+<tc-card [title]="'Custom styles'">
+  <tc-form-group>
+    <tc-switcher
+      [bgColor]="'#50bd35'"
+      [borderColor]="'#50bd35'"
+      [color]="'#fff'"
+    >Custom style</tc-switcher>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-switcher
+      [bgColor]="['transparent', '#e5bf09']"
+      [borderColor]="['#e5bf09', '#e5bf09']"
+      [color]="['#e5bf09', '#fff']"
+    >Custom hover style</tc-switcher>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-switcher
+      [bgColor]="['transparent', '#ec846e', '#ec2427']"
+      [borderColor]="['#ec846e', '#ec846e', '#ec2427']"
+      [color]="['#ec846e', '#fff', '#ffc1a6']"
+    >Custom checked style</tc-switcher>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-switcher
+      [bgColor]="['transparent', '#c18ae5', '#863d9d']"
+      [borderColor]="['#9982ab', '#c18ae5', '#863d9d']"
+      [color]="['#9982ab', '#fff']"
+      [labelColor]="['#9982ab', '#c18ae5', '#863d9d']"
+    >Custom label style</tc-switcher>
+  </tc-form-group>
+
+  <tc-form-group class="mb-0">
+    <tc-switcher
+      [value]="true"
+      [disabled]="true"
+      [bgColor]="['transparent', '#7ccee5', '#244ae5', '#9bc5f9']"
+      [borderColor]="['#7ccee5', '#7ccee5', '#244ae5', '#9bc5f9']"
+      [color]="['#fff', '#fff', '#b6d4ff', '#cee4f9']"
+    >Custom disable style</tc-switcher>
+  </tc-form-group>
+</tc-card>
+
+<tc-card [title]="'Forms'" class="mb-0">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <form [formGroup]="reactiveForm" novalidate>
+        <tc-form-group>
+          <tc-form-label>Reactive form</tc-form-label>
+
+          <tc-switcher formControlName="switcherField"></tc-switcher>
+        </tc-form-group>
+      </form>
+
+      <tc-input [readonly]="true" [(ngModel)]="reactiveForm.value.switcherField"></tc-input>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Template driven form</tc-form-label>
+
+        <tc-switcher #templateForm></tc-switcher>
+      </tc-form-group>
+
+      <tc-input [readonly]="true" [(ngModel)]="templateForm.value"></tc-input>
+    </div>
+  </div>
+</tc-card>

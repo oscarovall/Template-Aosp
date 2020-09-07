@@ -1,0 +1,99 @@
+<div class="row">
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Default rating'">
+			<tc-form-group>
+				<tc-rating></tc-rating>
+			</tc-form-group>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Rating with with current value'">
+			<tc-form-group>
+				<tc-rating [default]="4"></tc-rating>
+			</tc-form-group>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Custom icons'">
+			<tc-form-group>
+				<tc-rating [iconView]="'icofont-check-circled'"></tc-rating>
+			</tc-form-group>
+
+			<tc-form-group>
+				<tc-rating [iconView]="'icofont-heart-alt'" [color]="['#8e8e8e','#4ad121','#ff0000']"></tc-rating>
+			</tc-form-group>
+
+			<tc-form-group class="mb-0">
+				<tc-rating [iconView]="'icofont-square'" [color]="['#d134be','#f7df07','#1e43c9']"></tc-rating>
+			</tc-form-group>
+		</tc-card>
+	</div>
+
+	<div class="col-md-6 col-12">
+		<tc-card [title]="'Custom items count'">
+			<tc-form-group>
+				<tc-rating [iconView]="'icofont-lemon-alt'" [iconsNumber]="2"></tc-rating>
+			</tc-form-group>
+
+			<tc-form-group>
+				<tc-rating [iconView]="'icofont-burger'" [iconsNumber]="6" [color]="['#8e8e8e','#4ad121','#ff0000']"></tc-rating>
+			</tc-form-group>
+
+			<tc-form-group class="mb-0">
+				<tc-rating [iconView]="'icofont-water-drop'" [iconsNumber]="10" [color]="['#d134be','#f7df07','#1e43c9']"></tc-rating>
+			</tc-form-group>
+		</tc-card>
+	</div>
+</div>
+
+<tc-card [title]="'Forms'" class="mb-0">
+	<div class="row">
+		<div class="col-12 col-md-6 mb-4 mb-md-0">
+			<form novalidate>
+				<tc-form-group>
+					<tc-form-label>Rating on click</tc-form-label>
+
+					<tc-rating #rating></tc-rating>
+				</tc-form-group>
+			</form>
+
+			<tc-input [readonly]="true" [(ngModel)]="rating.value"></tc-input>
+		</div>
+
+		<div class="col-12 col-md-6">
+			<tc-form-group>
+				<tc-form-label>Rating on hover</tc-form-label>
+
+				<tc-rating #rating2 [iconsNumber]="10" [hover]="true"></tc-rating>
+			</tc-form-group>
+
+			<tc-input [readonly]="true" [(ngModel)]="rating2.value"></tc-input>
+		</div>
+	</div>
+
+  <div class="row mt-4">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <form [formGroup]="reactiveForm" novalidate>
+        <tc-form-group>
+          <tc-form-label>Reactive form</tc-form-label>
+
+          <tc-rating formControlName="field"></tc-rating>
+        </tc-form-group>
+      </form>
+
+      <tc-input [readonly]="true" [(ngModel)]="reactiveForm.value.field"></tc-input>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group>
+        <tc-form-label>Template driven form</tc-form-label>
+
+        <tc-rating #templateForm [ngModel]="8" [iconsNumber]="10"></tc-rating>
+      </tc-form-group>
+
+      <tc-input [readonly]="true" [(ngModel)]="templateForm.value"></tc-input>
+    </div>
+  </div>
+</tc-card>

@@ -1,0 +1,280 @@
+<div class="row">
+  <div class="col-md-6">
+    <tc-card [title]="'Basic'">
+      <tc-form-group>
+        <tc-input [innerValue]="'Value'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [placeholder]="'With placeholder'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-form-label>Input label</tc-form-label>
+
+        <tc-input [placeholder]="'With label'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-input [placeholder]="'With description'"></tc-input>
+
+        <tc-form-description>Input description</tc-form-description>
+      </tc-form-group>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6">
+    <tc-card [title]="'Prefix / suffix'">
+      <tc-form-group>
+        <tc-input [prefix]="'Prefix'" [placeholder]="'placeholder'" [innerValue]="'default'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [prefix]="['Prefix', '#e24d4d']" [placeholder]="'placeholder'" [innerValue]="'colored'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [suffix]="'suffix'" [placeholder]="'Placeholder'" [innerValue]="'Default'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [suffix]="['suffix', '#e24d4d']" [placeholder]="'Placeholder'" [innerValue]="'Colored'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [prefix]="'Prefix'" [suffix]="'suffix'" [placeholder]="'placeholder'" [innerValue]="'value'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input
+          [prefix]="'Prefix'"
+          [suffix]="'suffix'"
+          [placeholder]="'placeholder'"
+          [innerValue]="'default'"
+          [autoSize]="true"
+        ></tc-input>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-input
+          [prefix]="['Prefix', '#e24d4d']"
+          [suffix]="['suffix', '#e24d4d']"
+          [placeholder]="'placeholder'"
+          [innerValue]="'colored'"
+          [autoSize]="true"
+        ></tc-input>
+      </tc-form-group>
+    </tc-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <tc-card [title]="'Input size'">
+      <tc-form-group>
+        <tc-input [size]="'sm'" [placeholder]="'Small size'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [placeholder]="'Default size'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-input [size]="'lg'" [placeholder]="'Large size'"></tc-input>
+      </tc-form-group>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6">
+    <tc-card [title]="'With icons'">
+      <tc-form-group>
+        <tc-input [prefixIcon]="'icofont-cur-euro'" [placeholder]="'Placeholder'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [suffixIcon]="'icofont-pencil-alt-5'" [placeholder]="'Placeholder'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input
+          [prefixIcon]="'icofont-boy'"
+          [suffixIcon]="'icofont-search-alt-2'"
+          [placeholder]="'Placeholder'"
+        ></tc-input>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-input
+          [prefixIcon]="'icofont-curved-double-left'"
+          [suffixIcon]="'icofont-curved-double-right'"
+          [placeholder]="'Placeholder'"
+          [innerValue]="'Value'"
+          [autoSize]="true"
+        ></tc-input>
+      </tc-form-group>
+    </tc-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <tc-card [title]="'Shape'">
+      <tc-form-group>
+        <tc-input [tcShape]="0" [placeholder]="'Square'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [placeholder]="'Default'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-input [tcShape]="20" [placeholder]="'Rounded'"></tc-input>
+      </tc-form-group>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6">
+    <tc-card [title]="'Char limiting'">
+      <tc-form-group>
+        <tc-input [charLimiting]="20" [placeholder]="'Limit 20 symbols'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [charLimiting]="50" [prefixIcon]="'icofont-pen-alt-4'" [placeholder]="'Limit 50 symbols'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-input [charLimiting]="10" [suffixIcon]="'icofont-ui-email'" [placeholder]="'Limit 10 symbols'"></tc-input>
+      </tc-form-group>
+    </tc-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <tc-card [title]="'Custom styles'">
+      <tc-form-group>
+        <tc-input
+          [bgColor]="'#50bd35'"
+          [borderColor]="'#50bd35'"
+          [color]="'#fff'"
+          [placeholder]="'Custom style'"
+          [innerValue]="'Custom style'"
+        ></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input
+          [bgColor]="'transparent'"
+          [borderColor]="'#678cf9'"
+          [color]="'#678cf9'"
+          [placeholder]="'Custom style'"
+          [innerValue]="'Custom style'"
+        ></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input
+          [bgColor]="['#e24d4d', '#ffa522']"
+          [borderColor]="['#e24d4d', '#ffa522']"
+          [color]="['#000', '#fff']"
+          [placeholder]="'Custom hover style'"
+          [innerValue]="'Custom hover style'"
+        ></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input
+          [borderColor]="['#F06292', '#E91E63']"
+          [color]="['#F06292', '#E91E63']"
+          [placeholder]="'Custom hover style'"
+          [innerValue]="'Custom hover style'"
+        ></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input
+          [bgColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [borderColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [color]="['#fff', '#fff', '#fff']"
+          [placeholder]="'Custom focus style'"
+          [innerValue]="'Custom focus style'"
+        ></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input
+          [borderColor]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [color]="['#BA68C8', '#9C27B0', '#7B1FA2']"
+          [placeholder]="'Custom focus style'"
+          [innerValue]="'Custom focus style'"
+        ></tc-input>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-input
+          [bgColor]="['', '', '', '#E8EAF6']"
+          [borderColor]="['', '', '', '#E8EAF6']"
+          [color]="['', '', '', '#a8a8a8']"
+          [disabled]="true"
+          [placeholder]="'Custom disabled style'"
+          [innerValue]="'Custom disabled style'"
+        ></tc-input>
+      </tc-form-group>
+    </tc-card>
+  </div>
+
+  <div class="col-md-6">
+    <tc-card [title]="'Type'">
+      <tc-form-group>
+        <tc-input [placeholder]="'Text input'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [placeholder]="'Email input'" [type]="'email'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [placeholder]="'Password input'" [type]="'password'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [placeholder]="'Number input'" [type]="'number'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [placeholder]="'Search input'" [type]="'search'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group>
+        <tc-input [placeholder]="'Disabled input'" [disabled]="true" [innerValue]="'Disabled input'"></tc-input>
+      </tc-form-group>
+
+      <tc-form-group class="mb-0">
+        <tc-input [placeholder]="'Readonly input'" [readonly]="true" [innerValue]="'Readonly input'"></tc-input>
+      </tc-form-group>
+    </tc-card>
+  </div>
+</div>
+
+<tc-card [title]="'Forms'" class="mb-0">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <form [formGroup]="reactiveForm" novalidate>
+        <tc-form-group class="mb-0">
+          <tc-form-label>Reactive form</tc-form-label>
+
+          <tc-input [placeholder]="'Type value'" formControlName="field"></tc-input>
+        </tc-form-group>
+      </form>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <tc-form-group class="mb-0">
+        <tc-form-label>Template driven form</tc-form-label>
+
+        <tc-input [placeholder]="'Type value'"></tc-input>
+      </tc-form-group>
+    </div>
+  </div>
+</tc-card>

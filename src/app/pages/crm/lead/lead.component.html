@@ -1,0 +1,536 @@
+<div class="m-0 p-3">
+  <!-- Wizard -->
+  <div class="row w-100 p-4">
+    <steps [steps]="wizardGroups" class="w-100"></steps>
+  </div>
+
+  <!-- Custumer Info -->
+  <div class="row mb-4">
+    <div class="col-12 col-md-9 d-flex">
+      <div class="title" *ngIf="lead">{{lead.mainCustomer.name + ' ' + lead.mainCustomer.lastname}}</div>
+      <label class="defaultTag ml-3 " *ngIf="lead">{{lead.status}}</label>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3">
+      <button class="warningBtn w-100 p-0">QUALIFYING QUESTIONS</button>
+    </div>
+  </div>
+
+  <!-- Lead Main Info -->
+  <div class="row mb-4">
+    <div class="col-12 col-md-9 p-0">
+      <div class="row">
+        <!-- Source (Automatic) -->
+        <div class="col-6 col-sm-3">
+          <p class="title2">Source</p>
+          <select class="w-100">
+            <option class="w-100">Walk In</option>
+          </select>
+        </div>
+
+        <!-- 1st Visit -->
+        <div class="col-6 col-sm-3">
+          <p class="title2">1st Visit</p>
+          <date-picker *ngIf="lead" [myDateValue]="lead._1stVisitDate" [required]="'required'"></date-picker>
+        </div>
+
+        <!-- Signing Date -->
+        <div class="col-6 col-sm-3">
+          <p class="title2">Signing Date</p>
+          <date-picker *ngIf="lead" [myDateValue]="lead.signingDate"></date-picker>
+        </div>
+
+        <!-- Close Date -->
+        <div class="col-6 col-sm-3">
+          <p class="title2">Close Date</p>
+          <date-picker *ngIf="lead" [myDateValue]="lead.closeDate" [required]="'required'"></date-picker>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-12 col-sm-4 col-md-3 p-0">
+      <div class="row">
+        <!-- Deal Start -->
+        <div class="col-4">
+          <p class="title3">Deal Start</p>
+          <div *ngIf="lead" [attr.class]="lead.creationDate | datecolorPipe">
+            <div class="title4">{{lead.creationDate | dateagoPipe}}</div>
+            <small>Days ago</small>
+          </div>
+        </div>
+        <!-- Last Contact -->
+        <div class="col-4">
+          <p class="title3">Contacted</p>
+          <div *ngIf="lead" [attr.class]="lead.lastContactDate | datecolorPipe">
+            <div class="title4">{{lead.lastContactDate | dateagoPipe}}</div>
+            <small>Days ago</small>
+          </div>
+        </div>
+        <!-- Close Date -->
+        <div class="col-4">
+          <p class="title3">Close Date</p>
+          <div *ngIf="lead" [attr.class]="lead.closeDate | datecolorPipe">
+            <div class="title4">{{lead.closeDate | dateagoPipe}}</div>
+            <small>Days left</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Classes -->
+  <div class="row w-100" *ngIf="classes">
+    <div class="col-lg-9 col-md-12">
+      <ng-container *ngFor="let class of classes | classcolPipe:false">
+        <tc-accordion [view]="'alternative'" class="w-100 p-0" *ngIf='validateClass(class.attribute, classes)'>
+          <tc-panel [title]="class.name" [size]="'sm'" [opened]="class.open" *ngIf="class.visible">
+            <tc-card style="background-color: #0c1d55 !important;" class="p-0 m-0">
+              <form #f="ngForm" (keydown.enter)="cancelarPropagacion($event)" id="leccionForma" class="form PrintArea"
+                [ngClass]="{'was-validated': class.wasValidated}" novalidate>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-3 mb-4"
+                    [ngClass]="{ 'col-lg-6': attributeType.dataTypeId === appConfig.dataType.TextLong }"
+                    *ngFor="let attributeType of class.attributeType">
+                    <div *ngIf="validate(attributeType.attributeNavigation,class)">
+                      <p class="title2">{{ attributeType.name }}</p>
+
+                      <!-- Input -->
+                      <input *ngIf="!class.disabled && attributeType.dataTypeId == appConfig.dataType.Text" value="{{
+                      class.objectTypeId === appConfig.objectType.Lead ?
+                        attributeType.leadAttributeValue &&
+                        attributeType.leadAttributeValue[0] &&
+                        attributeType.leadAttributeValue[0].leadAttributeValue1
+                            ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                          : ''
+                      : attributeType.customerAttributeValue &&
+                      attributeType.customerAttributeValue[0] &&
+                      attributeType.customerAttributeValue[0].customerAttributeValue1
+                          ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                        : ''
+                    }}" class="w-100 form-control" type="text"
+                        (change)="onChange($event.target.value, attributeType, class)"
+                        [maxLength]="attributeType ? attributeType.length : ''" [required]="attributeType.obligatory" />
+                      <div class="text" ngbTooltip="{{
+                      class.objectTypeId === appConfig.objectType.Lead ?
+                          attributeType.leadAttributeValue &&
+                          attributeType.leadAttributeValue[0] &&
+                          attributeType.leadAttributeValue[0].leadAttributeValue1
+                              ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                            : ''
+                        : attributeType.customerAttributeValue &&
+                        attributeType.customerAttributeValue[0] &&
+                        attributeType.customerAttributeValue[0].customerAttributeValue1
+                            ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                          : ''
+                    }}" *ngIf="class.disabled && attributeType.dataTypeId == appConfig.dataType.Text">
+                        {{class.objectTypeId === appConfig.objectType.Lead ?
+                        attributeType.leadAttributeValue &&
+                        attributeType.leadAttributeValue[0] &&
+                        attributeType.leadAttributeValue[0].leadAttributeValue1
+                            ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                          : ''
+                      : attributeType.customerAttributeValue &&
+                      attributeType.customerAttributeValue[0] &&
+                      attributeType.customerAttributeValue[0].customerAttributeValue1
+                          ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                        : ''}}
+                      </div>
+
+                      <!-- Text Area -->
+                      <textarea *ngIf="!class.disabled && attributeType.dataTypeId == appConfig.dataType.TextLong"
+                        [disabled]="class.disabled" class="w-100 form-control"
+                        (change)="onChange($event.target.value, attributeType, class)" value="{{
+                          class.objectTypeId === appConfig.objectType.Lead ?
+                            attributeType.leadAttributeValue &&
+                            attributeType.leadAttributeValue[0] &&
+                            attributeType.leadAttributeValue[0].leadAttributeValue1
+                                ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                              : ''
+                          : attributeType.customerAttributeValue &&
+                          attributeType.customerAttributeValue[0] &&
+                          attributeType.customerAttributeValue[0].customerAttributeValue1
+                              ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                            : ''
+                        }}" [required]="attributeType.obligatory">
+                        </textarea>
+                      <p *ngIf="class.disabled && attributeType.dataTypeId == appConfig.dataType.TextLong">
+                        {{
+                            class.objectTypeId === appConfig.objectType.Lead ?
+                            attributeType.leadAttributeValue &&
+                            attributeType.leadAttributeValue[0] &&
+                            attributeType.leadAttributeValue[0].leadAttributeValue1
+                                ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                              : ''
+                          : attributeType.customerAttributeValue &&
+                          attributeType.customerAttributeValue[0] &&
+                          attributeType.customerAttributeValue[0].customerAttributeValue1
+                              ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                            : ''
+                          }}
+                      </p>
+
+                      <!-- Date -->
+                      <date-picker *ngIf="!class.disabled && attributeType.dataTypeId == appConfig.dataType.Date"
+                        [myDateValue]="class.objectTypeId === appConfig.objectType.Lead ?
+                    attributeType.leadAttributeValue &&
+                    attributeType.leadAttributeValue[0] &&
+                    attributeType.leadAttributeValue[0].leadAttributeValue1
+                        ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                      : ''
+                  : attributeType.customerAttributeValue &&
+                  attributeType.customerAttributeValue[0] &&
+                  attributeType.customerAttributeValue[0].customerAttributeValue1
+                      ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                    : ''" (change)="onChange($event, attributeType, class)" [required]="attributeType.obligatory">
+                      </date-picker>
+                      <p *ngIf="class.disabled && attributeType.dataTypeId == appConfig.dataType.Date">
+                        {{
+                          class.objectTypeId === appConfig.objectType.Lead ?
+                          attributeType.leadAttributeValue &&
+                          attributeType.leadAttributeValue[0] &&
+                          attributeType.leadAttributeValue[0].leadAttributeValue1
+                              ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                            : ''
+                        : attributeType.customerAttributeValue &&
+                        attributeType.customerAttributeValue[0] &&
+                        attributeType.customerAttributeValue[0].customerAttributeValue1
+                            ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                          : ''
+                         |  date }}
+                      </p>
+
+                      <!-- Lists - Dropdowns -->
+                      <select *ngIf="attributeType.dataTypeId == appConfig.dataType.ListValue"
+                        class="w-100 form-control form-control-line animated fadeIn"
+                        (change)="onChange($event.target.value, attributeType, class)"
+                        [required]="attributeType.obligatory" [value]="
+                      class.objectTypeId === appConfig.objectType.Lead ?
+                            attributeType.leadAttributeValue &&
+                            attributeType.leadAttributeValue[0] &&
+                            attributeType.leadAttributeValue[0].attributeId
+                                ? attributeType.leadAttributeValue[0].attributeId
+                              : 0
+                          : attributeType.customerAttributeValue &&
+                          attributeType.customerAttributeValue[0] &&
+                          attributeType.customerAttributeValue[0].attributeId
+                              ? attributeType.customerAttributeValue[0].attributeId
+                            : 0
+                      " [disabled]="class.disabled">
+                        <option class="w-100" *ngFor="let attribute of attributeType.attribute"
+                          value="{{attribute.attributeId}}">
+                          {{ attribute.value }}
+                        </option>
+                      </select>
+
+                      <!-- Time picker -->
+                      <timepicker *ngIf="attributeType.dataTypeId == appConfig.dataType.Time" [ngModel]="
+                        attributeType.leadAttributeValue[0].leadAttributeValue1
+                      " (ngModelChange)="onChange($event, attributeType, class)" name="timepicker"
+                        class="animated fadeIn" [disabled]="class.disabled" [showSpinners]="false"
+                        [required]="attributeType.obligatory">
+                      </timepicker>
+
+                      <!-- List Images -->
+                      <file-uploader *ngIf="attributeType.dataTypeId == appConfig.dataType.ListImages"
+                        [value]="attributeType.attribute" [document]="false" [disabled]="class.disabled"
+                        [required]="attributeType.obligatory" [links]="class.objectTypeId === appConfig.objectType.Lead ?
+                      attributeType.leadAttributeValue
+                          ? attributeType.leadAttributeValue
+                        : ''
+                    : attributeType.customerAttributeValue
+                          ? attributeType.customerAttributeValue
+                        : ''
+                    " (change)="onChange($event, attributeType, class)">
+                      </file-uploader>
+
+                      <!-- Radio -->
+                      <tc-radio *ngIf="attributeType.dataTypeId == appConfig.dataType.Radio" [value]="class.objectTypeId === appConfig.objectType.Lead ?
+                  attributeType.leadAttributeValue &&
+                  attributeType.leadAttributeValue[0] &&
+                  attributeType.leadAttributeValue[0].leadAttributeValue1
+                      ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                    : ''
+                  : attributeType.customerAttributeValue &&
+                   attributeType.customerAttributeValue[0] &&
+                  attributeType.customerAttributeValue[0].customerAttributeValue1
+                    ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                  : '' " (change)="onChange($event, attributeType, class)" [required]="attributeType.obligatory">
+
+                        <div class="row w-100 mr-0 justify-content-between"
+                          *ngFor="let attribute of attributeType.attribute">
+                          <tc-radio-option [value]="attribute.value" class="col mr-0" [disabled]="class.disabled">
+                            {{ attribute.value }}</tc-radio-option>
+                        </div>
+                      </tc-radio>
+
+                      <!-- Money -->
+                      <number-format *ngIf="attributeType.dataTypeId == appConfig.dataType.Money" [value]="
+                  class.objectTypeId === appConfig.objectType.Lead ?
+                        attributeType.leadAttributeValue &&
+                        attributeType.leadAttributeValue[0] &&
+                        attributeType.leadAttributeValue[0].leadAttributeValue1
+                            ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                          : ''
+                      : attributeType.customerAttributeValue &&
+                      attributeType.customerAttributeValue[0] &&
+                      attributeType.customerAttributeValue[0].customerAttributeValue1
+                          ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                        : ''
+                  " [disabled]="class.disabled" [format]="'money-USD'" (change)="
+                        onChange($event.target.value, attributeType, class)" [required]="attributeType.obligatory">
+                      </number-format>
+
+                      <!-- Checbox -->
+                      <div *ngIf="attributeType.dataTypeId == appConfig.dataType.Multiple">
+                        <tc-checkbox *ngFor="let attribute of attributeType.attribute" [value]="attribute.checkValue"
+                          [disabled]="class.disabled" [required]="attributeType.obligatory" class="form-control"
+                          (change)="onChange($event, attributeType, class, attribute)">
+                          {{ attribute.value }}
+                        </tc-checkbox>
+                      </div>
+
+
+                      <!-- External Link -->
+                      <input *ngIf="!class.disabled && attributeType.dataTypeId ==  appConfig.dataType.ExternalLink"
+                        class="w-100 form-control" type="text" [disabled]="class.disabled"
+                        [required]="attributeType.obligatory" [value]="
+                        class.objectTypeId === appConfig.objectType.Lead ?
+                              attributeType.leadAttributeValue &&
+                              attributeType.leadAttributeValue[0] &&
+                              attributeType.leadAttributeValue[0].leadAttributeValue1
+                                  ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                                : ''
+                            : attributeType.customerAttributeValue &&
+                            attributeType.customerAttributeValue[0] &&
+                            attributeType.customerAttributeValue[0].customerAttributeValue1
+                                ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                              : ''
+                        " (change)="onChange($event.target.value, attributeType, class)" />
+                      <a *ngIf="class.disabled && attributeType.dataTypeId ==  appConfig.dataType.ExternalLink" [href]="class.objectTypeId === appConfig.objectType.Lead ?
+                        attributeType.leadAttributeValue &&
+                        attributeType.leadAttributeValue[0] &&
+                        attributeType.leadAttributeValue[0].leadAttributeValue1
+                            ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                          : ''
+                      : attributeType.customerAttributeValue &&
+                      attributeType.customerAttributeValue[0] &&
+                      attributeType.customerAttributeValue[0].customerAttributeValue1
+                          ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                        : ''
+                    " ngbTooltip="{{class.objectTypeId === appConfig.objectType.Lead ?
+                    attributeType.leadAttributeValue &&
+                    attributeType.leadAttributeValue[0] &&
+                    attributeType.leadAttributeValue[0].leadAttributeValue1
+                        ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                      : ''
+                  : attributeType.customerAttributeValue &&
+                  attributeType.customerAttributeValue[0] &&
+                  attributeType.customerAttributeValue[0].customerAttributeValue1
+                      ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                    : ''}}">click here</a>
+
+                      <!-- File Uploader -->
+                      <file-uploader *ngIf="attributeType.dataTypeId ==  appConfig.dataType.ListDocument" [links]="class.objectTypeId === appConfig.objectType.Lead ?
+                    attributeType.leadAttributeValue
+                        ? attributeType.leadAttributeValue
+                      : ''
+                  : attributeType.customerAttributeValue
+                        ? attributeType.customerAttributeValue
+                      : ''" [value]="attributeType.attribute" [document]="true" [disabled]="class.disabled"
+                        [required]="attributeType.obligatory" (change)="onChange($event, attributeType, class)">
+                      </file-uploader>
+
+                      <!-- Number Picker -->
+                      <number-picker *ngIf="attributeType.dataTypeId ==  appConfig.dataType.Number"
+                        [required]="attributeType.obligatory" [disabled]="class.disabled" [value]="class.objectTypeId === appConfig.objectType.Lead ?
+                              attributeType.leadAttributeValue &&
+                              attributeType.leadAttributeValue[0] &&
+                              attributeType.leadAttributeValue[0].leadAttributeValue1
+                                  ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                                : 0
+                            : attributeType.customerAttributeValue &&
+                            attributeType.customerAttributeValue[0] &&
+                            attributeType.customerAttributeValue[0].customerAttributeValue1
+                                ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                              : 0" (change)="onChange($event, attributeType, class)"></number-picker>
+
+                      <!-- Lineal Gauge -->
+                      <lineal-gauge *ngIf="attributeType.dataTypeId ==  appConfig.dataType.LienalGauge"
+                        [required]="attributeType.obligatory" [Title]="''" [disabled]="class.disabled" value="{{
+                        class.objectTypeId === appConfig.objectType.Lead ?
+                              attributeType.leadAttributeValue &&
+                              attributeType.leadAttributeValue[0] &&
+                              attributeType.leadAttributeValue[0].leadAttributeValue1
+                                  ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                                : 0
+                            : attributeType.customerAttributeValue &&
+                            attributeType.customerAttributeValue[0] &&
+                            attributeType.customerAttributeValue[0].customerAttributeValue1
+                                ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                              : 0
+                      }}" (change)="onChange($event, attributeType, class)"></lineal-gauge>
+
+
+                      <!-- Phone number -->
+                      <number-format *ngIf="attributeType.dataTypeId ==  appConfig.dataType.PhoneNumber"
+                        [disabled]="class.disabled" [format]="'phoneNumber'" [required]="attributeType.obligatory"
+                        (change)="
+                        onChange($event.target.value, attributeType, class)
+                      " [value]="
+                      class.objectTypeId === appConfig.objectType.Lead ?
+                            attributeType.leadAttributeValue &&
+                            attributeType.leadAttributeValue[0] &&
+                            attributeType.leadAttributeValue[0].leadAttributeValue1
+                                ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                              : ''
+                          : attributeType.customerAttributeValue &&
+                          attributeType.customerAttributeValue[0] &&
+                          attributeType.customerAttributeValue[0].customerAttributeValue1
+                              ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                            : ''
+                      " [disabled]="class.disabled" [format]="'money-USD'" (change)="
+                        onChange($event.target.value, attributeType, class)
+                      ">
+                      </number-format>
+
+                      <!-- Progress -->
+                      <div *ngIf="attributeType.dataTypeId ==  appConfig.dataType.Progress">
+                        <tc-progress *ngIf="attributeType.dataTypeId ==  appConfig.dataType.Progress"
+                          [color]="'#6ca100'" [progress]="class.objectTypeId === appConfig.objectType.Lead ?
+                            attributeType.leadAttributeValue &&
+                            attributeType.leadAttributeValue[0] &&
+                            attributeType.leadAttributeValue[0].leadAttributeValue1
+                                ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                              : 0
+                          : attributeType.customerAttributeValue &&
+                          attributeType.customerAttributeValue[0] &&
+                          attributeType.customerAttributeValue[0].customerAttributeValue1
+                              ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                            : 0">
+                        </tc-progress>
+                      </div>
+
+                      <!-- Money Range -->
+                      <div *ngIf="attributeType.dataTypeId ==  appConfig.dataType.MoneyRange">
+                        <range [Disabled]="class.disabled" (Change)="onChange($event, attributeType, class)"
+                          [required]="attributeType.obligatory" [value]="
+                      class.objectTypeId === appConfig.objectType.Lead ?
+                            attributeType.leadAttributeValue &&
+                            attributeType.leadAttributeValue[0] &&
+                            attributeType.leadAttributeValue[0].leadAttributeValue1
+                                ? attributeType.leadAttributeValue[0].leadAttributeValue1
+                              : ''
+                          : attributeType.customerAttributeValue &&
+                          attributeType.customerAttributeValue[0] &&
+                          attributeType.customerAttributeValue[0].customerAttributeValue1
+                              ? attributeType.customerAttributeValue[0].customerAttributeValue1
+                            : ''
+                      "></range>
+                      </div>
+
+                      <div class="invalid-feedback"
+                        [ngClass]="{'d-block': attributeType.valid === false && !class.disabled && class.wasValidated}"
+                        *ngIf="attributeType.obligatory">It's required!</div>
+                    </div>
+                  </div>
+
+                  <!-- </div>
+
+              <div class="row"> -->
+                  <div class="col-12 h-100 text-right">
+                    <div *ngIf="class.disabled">
+                      <button (click)="class.disabled = !class.disabled" tc-button [afterIcon]="'icofont-pencil-alt-5'"
+                        [view]="'success'" [outline]="true"></button>
+                    </div>
+                    <div *ngIf="!class.disabled">
+                      <button (click)="class.disabled = !class.disabled" class="warningBtn mr-2">
+                        CANCEL
+                      </button>
+                      <button (click)="save(class)" class="mainBtn">
+                        SAVE
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </tc-card>
+          </tc-panel>
+        </tc-accordion>
+      </ng-container>
+    </div>
+
+    <div class="col-md-12 col-lg-3">
+      <ng-container *ngFor="let class of classes | classcolPipe:true">
+
+        <tc-accordion [view]="'alternative'" class="col-12" *ngIf='validateClass(class.attribute, classes)'>
+          <tc-panel [title]="class.name" [size]="'sm'" [opened]="class.open" *ngIf="class.visible">
+            <tc-card [title]="'Required Documents'">
+              <form #f="ngForm" (keydown.enter)="cancelarPropagacion($event)" id="leccionForma" class="form PrintArea"
+                [ngClass]="{'was-validated': class.wasValidated}" novalidate>
+                <div class="row">
+                  <div class="col-12 mb-4"
+                    [ngClass]="{ 'col-lg-6': attributeType.dataTypeId === appConfig.dataType.TextLong }"
+                    *ngFor="let attributeType of class.attributeType">
+                    <div *ngIf="validate(attributeType.attributeNavigation,class)">
+                      <p class="title2">{{ attributeType.name }}</p>
+
+                      <!-- List Images -->
+                      <file-uploader *ngIf="attributeType.dataTypeId == appConfig.dataType.ListImages"
+                        [value]="attributeType.attribute" [document]="false" [disabled]="class.disabled"
+                        [required]="attributeType.obligatory" [links]="class.objectTypeId === appConfig.objectType.Lead ?
+                          attributeType.leadAttributeValue
+                              ? attributeType.leadAttributeValue
+                            : ''
+                        : attributeType.customerAttributeValue
+                              ? attributeType.customerAttributeValue
+                            : ''
+                        " (change)="onChange($event, attributeType, class)">
+                      </file-uploader>
+
+                      <!-- File Uploader -->
+                      <file-uploader *ngIf="attributeType.dataTypeId ==  appConfig.dataType.ListDocument" [links]="class.objectTypeId === appConfig.objectType.Lead ?
+                          attributeType.leadAttributeValue
+                              ? attributeType.leadAttributeValue
+                            : ''
+                        : attributeType.customerAttributeValue
+                              ? attributeType.customerAttributeValue
+                            : ''" [value]="attributeType.attribute" [document]="true" [disabled]="class.disabled"
+                        [required]="attributeType.obligatory" (change)="onChange($event, attributeType, class)">
+                      </file-uploader>
+
+                      <div class="invalid-feedback"
+                        [ngClass]="{'d-block': attributeType.valid === false && !class.disabled && class.wasValidated}"
+                        *ngIf="attributeType.obligatory">It's required!</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 h-100 text-right">
+                    <div *ngIf="class.disabled">
+                      <button (click)="class.disabled = !class.disabled" tc-button [afterIcon]="'icofont-pencil-alt-5'"
+                        [view]="'success'" [outline]="true"></button>
+                    </div>
+                    <div *ngIf="!class.disabled">
+                      <button (click)="class.disabled = !class.disabled" class="warningBtn mr-2 pl-3 pr-3">
+                        CANCEL
+                      </button>
+                      <button (click)="save(class)" class="mainBtn pl-3 pr-3">
+                        SAVE
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+            </tc-card>
+          </tc-panel>
+        </tc-accordion>
+
+      </ng-container>
+    </div>
+  </div>
+  <div class="row w-100">
+    <div class="col-12">
+      <client-activity></client-activity>
+    </div>
+  </div>
+
+</div>

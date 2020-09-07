@@ -1,0 +1,14 @@
+@import '~assets/sass/variables';
+
+:host {
+  .badges-list {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    .tc-badge {
+      margin: 5px;
+    }
+  }
+}

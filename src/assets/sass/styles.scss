@@ -1,0 +1,459 @@
+@import '/variables';
+@import '/fonts';
+@import '/typography';
+@import '/helpers';
+@import '/aosp-icons';
+@import '/workflow';
+@import 'aosp/custom-select';
+@import '/time-picker.scss';
+@import '/sidebar';
+
+html {
+	background: $primary-bg;
+	color: $default-color;
+	font-family: $main-ff;
+	font-size: 16px;
+	height: 100%;
+}
+body {
+	height: 100%;
+	overflow-x: hidden;
+}
+app {
+	display: block;
+	height: 100%;
+}
+
+//@extend
+
+input.form-control {
+	align-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: inherit;
+	cursor: text;
+	display: flex;
+	outline: none;
+	padding: 0 1.25rem;
+	padding: 0 calc(1.25rem - .2em);
+	position: relative;
+	transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out;
+	line-height: 40px;
+	background: none;
+	color: #fff;
+}
+.form-control {
+	background: none;
+  padding: 0;
+  border: 0;
+  height: auto;
+}
+timepicker .form-control, .was-validated timepicker .form-control{
+  background-image: none !important;
+  padding-right: 7px !important;
+}
+.successBtn,.accentBtn,.warningBtn,.mainBtn{
+  padding-right: 2em;
+  padding-left: 2em;
+  border-width: 0px;
+  height: 33px;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2;
+  color: #eae5eb;
+  white-space: nowrap;
+
+}
+.warningBtn{
+  background-color: #cc7d22;
+}
+.successBtn {
+  background-color: #6ca100;
+}
+.errorBtn{
+  background-color: #dc3d3c;
+}
+.mainBtn{
+  background-color: #0068c5;
+}
+.sucessBttn:hover,.warningBtt:hover,.sucessBttn:hover,.mainBtn:hover{
+  -webkit-filter: brightness(150%);
+}
+
+.alertTag,.warnignTag,.successTag,.defaultTag,.inactiveTag{
+  color: #eae5eb;
+  border: transparent;
+  padding-right: 1em;
+  padding-left: 1em;
+  height: 22px;
+  border-radius: 4px;
+  margin-bottom: 0;
+  position: relative;
+  top: 5px;
+}
+
+.defaultTagBig{
+  width: 100%;
+  height: auto;
+  white-space: nowrap;
+  border-radius: 4px;
+  background-color: #00529b;
+  color: #eae5eb;
+  border: transparent;
+  align-content: center;
+  text-align: center;
+}
+
+.alertTag, .bg-warning{
+  background-color: #cc7d22;
+}
+.warnignTag, .errorTag, .bg-error{
+  background-color: #bd2536;
+}
+.successTag, .bg-success{
+  background-color: #6ca100;
+}
+.defaultTag, .bg-info{
+  background-color: #00529b;
+}
+
+p {
+  color: #FFF;
+}
+.title {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #FFF;
+}
+
+.title2 {
+  font-weight: 500;
+}
+
+.title3 {
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.title4 {
+  font-size: 20px;
+  line-height: 25px;
+  top: 4px;
+  position: relative;
+}
+
+.text{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+td > button {
+color: #FFF !important;
+}
+textarea,
+input[type=text],
+input[type=number],
+input[type=email],
+select {
+border-radius: 4px;
+	background-color: #1f316b !important;
+	border: 0px;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.14;
+	color: #eae5eb !important;
+	padding-left: 7px;
+}
+input[type=text],
+select,
+input[type=email],
+input[type=number] {
+	height: 32px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+.custom-select{
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23FFF' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px;
+}
+textarea {
+	padding: 7px;
+	height: 64px;
+}
+textarea.form-control,
+select.form-control {
+	padding: 7px;
+  font-size: inherit;
+}
+textarea.form-control {
+  height: 64px;
+}
+
+/**********
+Date-picker
+**********/
+date-picker input[type=text] {
+  background-image: url("/assets/img/AOSP/date_icon.svg");
+  background-size: 17px;
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+}
+
+/**********
+Timepicker
+**********/
+.was-validated timepicker.ng-invalid table {
+  padding-right: calc(1.5em + .75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px bottom 0px;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.was-validated timepicker.ng-invalid .form-control {
+  border: 1px solid #dc3545;
+  border-color: #dc3545 !important;
+}
+
+timepicker .btn{
+  position: relative;
+  font-size: 14px;
+  left: -15px;
+}
+
+
+.default-boxSizing {
+	box-sizing: unset;
+}
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.bg-aosp-info {
+	background-color: #0c1d55 !important;
+}
+.alertInput{
+  border: solid 1px #bd2536 !important;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.row {
+  margin: 0px;
+  //padding: 0px;
+}
+
+.modal-footer {
+  border: 0px;
+  padding: 0px;
+}
+
+// .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+//   padding-left: 0px;
+// }
+
+.col, [class*='col-'] {
+  padding-right:7px !important;
+  padding-left:7px !important;
+}
+
+.mat-dialog-container {
+	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14),
+		0 9px 46px 8px rgba(0, 0, 0, .12);
+	background: #0c1d55 !important;
+}
+
+//Modal
+.modal-body{
+  padding: 0px;
+}
+
+
+.hidden-xs-up {
+	display: none !important;
+}
+
+
+/***********
+Table
+************/
+.table {
+  color: #FFF;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  padding: 2px;
+}
+
+.table-bordered {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.table-bordered th{
+  border: 0;
+  font-weight: 500;
+}
+.table-bordered td{
+  border: 1px solid #5a6aa5;
+  border-radius: 4px;
+  font-weight: lighter;
+}
+.table-bordered thead td, .table-bordered thead th {
+  border: 0;
+  font-weight: 500;
+}
+
+/**********
+BS-datepicker
+**********/
+.bs-datepicker{
+  box-shadow: 0 0 3px 0 #5aaef3;
+  background: none;
+}
+
+.bs-datepicker-container {
+ padding: 0;
+}
+
+.bs-datepicker-head button.next, .bs-datepicker-head button.previous{
+  border-radius: 4px;
+  background-color: #1f316b;
+}
+
+.bs-datepicker-head button.next span, .bs-datepicker-head button.previous span {
+  line-height: 0.95;
+  color: #5aaef3;
+}
+
+.bs-datepicker-body table th{
+  color: #5aaef3;
+}
+
+.theme-green .bs-datepicker-head{
+  background-color: #001347;
+}
+
+.bs-datepicker-body{
+  background-color: #001347;
+  border: 0;
+}
+
+.bs-datepicker-body table td span.is-other-month, .bs-datepicker-body table td.is-other-month span{
+  color: #54708b;
+}
+
+.bs-datepicker-body table td{
+  color: #FFF;
+}
+
+.theme-green .bs-datepicker-body table td.week span{
+  color: #5aaef3;
+}
+
+
+.theme-green .bs-datepicker-body table td span:hover {
+  background-color: #00529b !important;
+}
+
+
+.theme-green .bs-datepicker-body table td.week span:hover,
+.theme-green .bs-datepicker-body table td span.is-other-month:hover {
+  background: none !important;
+}
+
+.theme-green .bs-datepicker-body table td span.selected {
+  background-color: #00529b;
+  color: #5aaef3;
+}
+
+
+@media (max-width: 575px) {
+	.hidden-xs-down {
+		display: none !important;
+	}
+}
+
+@media (min-width: 576px) {
+	.hidden-sm-up {
+		display: none !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.hidden-sm-down {
+		display: none !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.hidden-md-up {
+		display: none !important;
+	}
+}
+
+@media (max-width: 991px) {
+	.hidden-md-down {
+		display: none !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.hidden-lg-up {
+		display: none !important;
+	}
+}
+
+@media (max-width: 1199px) {
+	.hidden-lg-down {
+		display: none !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hidden-xl-up {
+		display: none !important;
+	}
+}
+
+.hidden-xl-down {
+	display: none !important;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #64b5f6 !important;
+}
+
+.mat-tab-label {
+  padding: 0 !important;
+  min-width: 0 !important;
+  opacity: 1 !important;
+  color: #64b5f6 !important;
+}

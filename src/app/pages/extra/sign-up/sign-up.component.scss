@@ -1,0 +1,43 @@
+@import '~assets/sass/variables';
+
+:host {
+	align-items: center;
+	background: url("~/assets/content/signup-bg.jpg") 50% 50% no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	overflow: hidden;
+	width: 100%;
+
+	> * {
+		width: 100%;
+		max-width: 400px;
+	}
+
+  .sign-up-form {
+		padding: ($module-rem * 3) ($module-rem * 2 ) ($module-rem );
+	}
+	.forgot-box {
+		align-items: center;
+		background: rgba(#000, .1);
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		padding: $module-rem;	
+		margin-top: ($module-rem * 2);
+		width: 100%;
+
+		a {
+			color: #fff;
+			opacity: .8;
+			font-size: 1em;
+			text-decoration: none;
+			transition: opacity .3s $animation;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+  }
+}
